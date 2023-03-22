@@ -32,15 +32,19 @@ editor: visual
 ::: incremental
 1.  ¿Cuál es la pregunta qué deseo contestar? ¿cuál es mi objetivo?
 
-    -   **Superioridad de un tratamiento vs. un control**
+    -   **Superioridad de mi tratamiento vs. un control**
+    
+    -   No existe diferencia de mi tratamiento vs. un control
 
-    -   Equivalencia de un tratamiento vs. una referencia
+    -   Equivalencia de mi tratamiento vs. una referencia
 
     -   Asociación/dependencia/correlación entre una o más variables
 
 2.  ¿Qué tipo de estudio voy a llevar a cabo?
 
     -   **Experimental**
+    
+    -   Observacional (*)
 
 3.  ¿Qué tipo de variables voy a medir?
 
@@ -50,6 +54,7 @@ editor: visual
 
     -   **Mi respuesta puede tomar cualquier valor real (positivo la mayor parte del tiempo)**
 :::
+
 
 ## Pasos en una investigación {.smaller visibility="uncounted"}
 
@@ -75,6 +80,9 @@ editor: visual
     -   Diseño de bloques completamente al azar (DBCA)
 
     -   Diseño factorial completo (DFC)
+    
+    -   Diseño cuadrado latino (DCL)
+
 :::
 
 ## Pasos en una investigación {.smaller visibility="uncounted"}
@@ -101,7 +109,7 @@ editor: visual
 
 . . .
 
--   Un principio básico del método científico es el análizar los datos en base a un protocolo pre-establecido, y NO a decidir qué análisis llevar a cabo una vez que se ven los datos.
+-   Un principio básico del método científico es el analizar los datos en base a un protocolo pre-establecido, y NO a decidir qué análisis llevar a cabo una vez que se ven los datos.
 
 ## Pasos en una investigación {.smaller visibility="uncounted"}
 
@@ -162,7 +170,7 @@ editor: visual
 ## Pilares del Diseño de Experimentos (DDE)
 
 ::: incremental
-1.  **Repetición/Replicacion:** es la aplicación de los tratamientos a un determinado número de unidades experimentales (al menos 3). Puede ser igual al tamaño de muestra en ciertos casos.
+1.  **Repetición/Replicación:** es la aplicación de los tratamientos a un determinado número de unidades experimentales (al menos 3). Puede ser igual al tamaño de muestra en ciertos casos.
 
 2.  **Aleatoriedad/Randomización:** la asignación de unidades experimentales a un tratamiento debe realizarse al azar. Esto evita sesgos en las inferencias estadísticas al precautelar la independencia de los datos recolectados.
 
@@ -230,11 +238,11 @@ A veces los recursos para llevar a cabo un estudio son limitados y recurrimos a 
 ::: incremental
 -   Ambas prácticas son por supuesto adecuadas, siempre y cuando sepamos que se usan para objetivos de investigación distintos, y los métodos de análisis también son distintos:
 
-    -   **Repeticiones biológicas**: Las usamos cuando deseamos hacer inferencias acerca de una población en general. El principio de independencia se mantiene y por tanto requieren metodología estándar (modelos lineales generalizados).
+    -   **Repeticiones biológicas**: Las usamos cuando deseamos hacer inferencias acerca de una población en general. El principio de independencia se mantiene y por tanto requieren metodología estándar (modelos lineales y modelos lineales generalizados).
 
-    -   **Repeticiones técnicas**: Las usamos cuando el enfoque es hacer inferencias sobre un inviduo o probando un método, esto por cuanto es natural que las medidas al venir de una misma unidad experimental estén correlacionadas. En este caso, métodos más complejos son necesarios (modelos lineales generalizados **mixtos**).
+    -   **Repeticiones técnicas**: Las usamos cuando el enfoque es hacer inferencias sobre un inviduo o probando un método, esto por cuanto es natural que las medidas al venir de una misma unidad experimental estén correlacionadas. En este caso, métodos más complejos son necesarios (modelos lineales **mixtos** y modelos lineales generalizados **mixtos**).
 
--   Existen tambien los casos donde ambos tipos de repetición son usados. Ejemplo: para determinar la eficiencia de un insecticida en 3 parcelas experimentales (repeticiones biológicas), se realizan conteos de larvas/insectos en 4 puntos dentro cada una (repeticiones técnicas).
+-   Existen tambien los casos donde ambos tipos de repetición son usados. Ejemplo: para determinar la eficiencia de un insecticida en 3 parcelas experimentales (repeticiones biológicas), se realizan conteos de larvas/insectos en 4 puntos dentro de cada una (repeticiones técnicas).
 :::
 
 ::: footer
@@ -280,7 +288,7 @@ Ya que hemos hablado de las repeticiones, **¿has escuchado del número 30?**
 ::: incremental
 -   30 es el número *mágico* considerado como el mínimo de observaciones requeridas para llevar a cabo un experimento.
 
--   Como otros números en estadística, proviene de convenciones adoptadas a lo largo del tiempo mas que de teoremas completamente indiscutidos.
+-   Como otros números en estadística, proviene de convenciones adoptadas a lo largo del tiempo más que de teoremas completamente indiscutidos.
 
 -   El número 30 ha sido demostrado como una *falacia* en [diversas ocasiones](https://stats.stackexchange.com/questions/2541/what-references-should-be-cited-to-support-using-30-as-a-large-enough-sample-siz){target="_blank"}
 
@@ -290,7 +298,7 @@ Ya que hemos hablado de las repeticiones, **¿has escuchado del número 30?**
 ## Ahora sí, ¡momento de planear nuestro experimento! {.smaller}
 
 ::: incremental
--   Una vez que hemos repasado los fundamentos del DDE, la pregunta que cabe es: ¿Cómo planeo ya sea un DCA, un DBCA o un DFC?
+-   Una vez que hemos repasado los fundamentos del DDE, la pregunta que cabe es: ¿Cómo planeo ya sea un DCA, un DBCA, un DFC o un DCL?
 
 -   Debemos tener en mente que los pilares más importantes a considerar, son las **repeticiones** y la **randomización**. [El **balance** viene a ser más un aspecto operacional.]{.fragment}
 
@@ -546,7 +554,7 @@ plot(dbca.bacterias)
 
 -   ¿Qué tienen en común estos dos factores? [¡ambos son controlados por el investigador!]{.fragment style="color:red;"}
 
--   En resumen, un tratamiento se define cómo el uso de un solo factor o la combinación de dos o más factores a evaluar en un conjunto (muestra) de unidades experimentales y sobre los cuales el investigador tiene total control.
+-   En resumen, un tratamiento se define cómo el uso de un solo factor o la combinación de dos o más factores a evaluar en un conjunto (muestra) de unidades experimentales y sobre los cuales el investigador tiene control.
 
 -   Un factor está conformado por $n$ niveles, en nuestro ejemplo hasta el momento tenemos lo siguiente:
 
@@ -641,11 +649,91 @@ plot(dfc.dbca.bacterias)
 
 En nuestro ejemplo de las bacterias degradadoras de N:
 
--   El investigador está también interesado en evaluar la reducción de fósforo en 3 concentraciones (P1, P2 y P3)
+-   El investigador ha decidido deshechar la cepa D por encontrarla poco eficiente en ensayos separados, por lo tanto el factor bacteria ahora cuenta únicamente con tres niveles.
+
+-   Además, está también interesado en evaluar la reducción de fósforo en 3 concentraciones (P1, P2 y P3)
 
     -   ¿Cómo serían las disposiciones de las botellas de medio de cultivo bajo un DCA y un DBCA factoriales completos si queremos 3 repeticiones?
 
     -   ¿Cuál es el número total de tratamientos ahora?
+    
+    -   ¿Cuál es el número total de unidades experimentales ahora?
+    
+
+##  Diseño Cuadrado Latino (DCL) {.smaller}
+
+::: incremental
+
+-   Se lo puede considerar como una extensión del DBCA factorial al incluir una variable más de bloque para reducir la variación (error) experimental.
+
+-   La ventaja de este tipo de diseños es que fraccionan (reducen) el número de unidades experimentales que serían necesarias para un DBCA factorial.
+
+-   Como condición presenta que el número de niveles de cada factor debe ser el mismo.
+
+-   Así, en nuestro ejercicio anterior al retirar la cepa D, tendríamos como base del diseño experimental los siguientes factores/niveles
+
+    -   Factor 1: Cepa
+        -   Niveles: 3 ("A", "B", "C")
+    -   Factor 2: Concentración de N
+        -   Niveles: 3 ("N1", "N2", "N3")
+    -   Factor 3: Concentración de P
+        -   Niveles: 3 ("P1", "P2", "P3")
+
+:::
+
+##  Diseño Cuadrado Latino (DCL) {visibility="uncounted" .smaller}
+
+::: incremental
+
+-   Bajo un DBCA factorial con 3 repeticiones, necesitaríamos 81 unidades experimentales, mientras que bajo un DCL, necesitaríamos 27.
+
+-   En otras palabras, podemos generalizar el número total de observaciones si aplicamos la siguiente fórmula: siendo $K$ el número de niveles en un diseño factorial de 3 factores, el número total de unidades experimentales que necesitamos es igual a:
+:::
+
+. . .
+
+
+```{=tex}
+\begin{align}
+\text{UE} &=\text{número de repeticiones} \times K^2
+\end{align}
+```
+
+-   Esta reducción en el número de unidades experimentales es conseguido gracias a arreglos especiales de las unidades experimentales (no nos adentraremos en detalle, pero si estás más interesado, puedes consultar [este enlace](http://wpd.ugr.es/~bioestad/wp-content/uploads/Latinos.pdf){target="_blank"})
+
+
+##  Diseño Cuadrado Latino (DCL) {.smaller visibility="uncounted"}
+
+```{r echo=T, eval=T}
+#| code-line-numbers: "1|2|3|5"
+latin_data <- data.frame(list(ROW = paste("P", 1:3, sep = ""),
+                              COLUMN = paste("N", 1:3, sep = ""),
+                              TREATMENT = paste("Cepa", 1:3, sep ="")))
+
+dcl.bacterias <- latin_square(t = NULL,
+                              reps = 3,
+                              plotNumber = 101,
+                              locationNames = "Quito",
+                              seed = 1985,
+                              data = latin_data)
+
+```
+
+::: columns
+::: {.column .fragment width="50%"}
+```{r echo=T, eval=T, error=T}
+head(dcl.bacterias$fieldBook, 14)
+```
+:::
+
+::: {.column .fragment width="50%"}
+```{r echo=T, eval=T, error=T}
+plot(dcl.bacterias)
+```
+:::
+:::
+
+
 
 ## Usando el `fieldBook`
 

@@ -4,21 +4,21 @@
     "href": "index.html#pasos-en-una-investigación",
     "title": "Estadística aplicada con R",
     "section": "Pasos en una investigación",
-    "text": "Pasos en una investigación\n\n\n¿Cuál es la pregunta qué deseo contestar? ¿cuál es mi objetivo?\n\nSuperioridad de un tratamiento vs. un control\nEquivalencia de un tratamiento vs. una referencia\nAsociación/dependencia/correlación entre una o más variables\n\n¿Qué tipo de estudio voy a llevar a cabo?\n\nExperimental\n\n¿Qué tipo de variables voy a medir?\n\nEs mi respuesta continua o discreta\n\n¿Cuál es el dominio de esas variables?\n\nMi respuesta puede tomar cualquier valor real (positivo la mayor parte del tiempo)"
+    "text": "Pasos en una investigación\n\n\n¿Cuál es la pregunta qué deseo contestar? ¿cuál es mi objetivo?\n\nSuperioridad de mi tratamiento vs. un control\nNo existe diferencia de mi tratamiento vs. un control\nEquivalencia de mi tratamiento vs. una referencia\nAsociación/dependencia/correlación entre una o más variables\n\n¿Qué tipo de estudio voy a llevar a cabo?\n\nExperimental\nObservacional (*)\n\n¿Qué tipo de variables voy a medir?\n\nEs mi respuesta continua o discreta\n\n¿Cuál es el dominio de esas variables?\n\nMi respuesta puede tomar cualquier valor real (positivo la mayor parte del tiempo)"
   },
   {
     "objectID": "index.html#pasos-en-una-investigación-1",
     "href": "index.html#pasos-en-una-investigación-1",
     "title": "Estadística aplicada con R",
     "section": "Pasos en una investigación",
-    "text": "Pasos en una investigación\n\n\n¿Cuál es el dominio de esas variables? (continuación)\n\nMi respuesta es un porcentaje (entre 0 y 100)\nMi respuesta es dicotómica (si/no)\nMi respuesta es un conteo (puede ser descrita con números enteros únicamente)\nMi respuesta es una proporción (valores entre 0 y 1)\nMi respuesta es categórica y representa un orden\nMi respuesta es categórica pero no representa un orden\n\nSi mi estudio es experimental, ¿qué diseño experimental voy a utilizar para levantar mis datos?\n\nDiseño completamente al azar (DCA)\nDiseño de bloques completamente al azar (DBCA)\nDiseño factorial completo (DFC)"
+    "text": "Pasos en una investigación\n\n\n¿Cuál es el dominio de esas variables? (continuación)\n\nMi respuesta es un porcentaje (entre 0 y 100)\nMi respuesta es dicotómica (si/no)\nMi respuesta es un conteo (puede ser descrita con números enteros únicamente)\nMi respuesta es una proporción (valores entre 0 y 1)\nMi respuesta es categórica y representa un orden\nMi respuesta es categórica pero no representa un orden\n\nSi mi estudio es experimental, ¿qué diseño experimental voy a utilizar para levantar mis datos?\n\nDiseño completamente al azar (DCA)\nDiseño de bloques completamente al azar (DBCA)\nDiseño factorial completo (DFC)\nDiseño cuadrado latino (DCL)"
   },
   {
     "objectID": "index.html#pasos-en-una-investigación-2",
     "href": "index.html#pasos-en-una-investigación-2",
     "title": "Estadística aplicada con R",
     "section": "Pasos en una investigación",
-    "text": "Pasos en una investigación\n\n\nSi mi estudio es observacional, ¿qué tipo de muestreo voy a llevar a cabo?\n\nSimple\nEstratificado\n\n¿Cuál debería ser el tamaño de mi muestra?\n¿Qué método(s) estadístico(s) voy a utilizar para analizar mis datos?\n\n\n\n¿Qué No debería hacer antes de realizar una investigación?\n\n\n\nEmpezarla sin haber pensado en todas las preguntas anteriores y esperar tener resultados estadísticamente válidos.\n\n\n\n\nUn principio básico del método científico es el análizar los datos en base a un protocolo pre-establecido, y NO a decidir qué análisis llevar a cabo una vez que se ven los datos."
+    "text": "Pasos en una investigación\n\n\nSi mi estudio es observacional, ¿qué tipo de muestreo voy a llevar a cabo?\n\nSimple\nEstratificado\n\n¿Cuál debería ser el tamaño de mi muestra?\n¿Qué método(s) estadístico(s) voy a utilizar para analizar mis datos?\n\n\n\n¿Qué No debería hacer antes de realizar una investigación?\n\n\n\nEmpezarla sin haber pensado en todas las preguntas anteriores y esperar tener resultados estadísticamente válidos.\n\n\n\n\nUn principio básico del método científico es el analizar los datos en base a un protocolo pre-establecido, y NO a decidir qué análisis llevar a cabo una vez que se ven los datos."
   },
   {
     "objectID": "index.html#pasos-en-una-investigación-3",
@@ -46,7 +46,7 @@
     "href": "index.html#pilares-del-diseño-de-experimentos-dde",
     "title": "Estadística aplicada con R",
     "section": "Pilares del Diseño de Experimentos (DDE)",
-    "text": "Pilares del Diseño de Experimentos (DDE)\n\n\nRepetición/Replicacion: es la aplicación de los tratamientos a un determinado número de unidades experimentales (al menos 3). Puede ser igual al tamaño de muestra en ciertos casos.\nAleatoriedad/Randomización: la asignación de unidades experimentales a un tratamiento debe realizarse al azar. Esto evita sesgos en las inferencias estadísticas al precautelar la independencia de los datos recolectados.\nBalance: se refiere al intentar el siempre tener un número igual de unidades experimentales en los tratamientos de interés. Datos no balanceados requieren de métodos estadísticos corregidos."
+    "text": "Pilares del Diseño de Experimentos (DDE)\n\n\nRepetición/Replicación: es la aplicación de los tratamientos a un determinado número de unidades experimentales (al menos 3). Puede ser igual al tamaño de muestra en ciertos casos.\nAleatoriedad/Randomización: la asignación de unidades experimentales a un tratamiento debe realizarse al azar. Esto evita sesgos en las inferencias estadísticas al precautelar la independencia de los datos recolectados.\nBalance: se refiere al intentar el siempre tener un número igual de unidades experimentales en los tratamientos de interés. Datos no balanceados requieren de métodos estadísticos corregidos."
   },
   {
     "objectID": "index.html#pilares-del-dde",
@@ -88,7 +88,7 @@
     "href": "index.html#sobre-las-repeticiones-2",
     "title": "Estadística aplicada con R",
     "section": "Sobre las repeticiones",
-    "text": "Sobre las repeticiones\n\n\nAmbas prácticas son por supuesto adecuadas, siempre y cuando sepamos que se usan para objetivos de investigación distintos, y los métodos de análisis también son distintos:\n\nRepeticiones biológicas: Las usamos cuando deseamos hacer inferencias acerca de una población en general. El principio de independencia se mantiene y por tanto requieren metodología estándar (modelos lineales generalizados).\nRepeticiones técnicas: Las usamos cuando el enfoque es hacer inferencias sobre un inviduo o probando un método, esto por cuanto es natural que las medidas al venir de una misma unidad experimental estén correlacionadas. En este caso, métodos más complejos son necesarios (modelos lineales generalizados mixtos).\n\nExisten tambien los casos donde ambos tipos de repetición son usados. Ejemplo: para determinar la eficiencia de un insecticida en 3 parcelas experimentales (repeticiones biológicas), se realizan conteos de larvas/insectos en 4 puntos dentro cada una (repeticiones técnicas).\n\n\n\nPara mayor información, visita este enlace"
+    "text": "Sobre las repeticiones\n\n\nAmbas prácticas son por supuesto adecuadas, siempre y cuando sepamos que se usan para objetivos de investigación distintos, y los métodos de análisis también son distintos:\n\nRepeticiones biológicas: Las usamos cuando deseamos hacer inferencias acerca de una población en general. El principio de independencia se mantiene y por tanto requieren metodología estándar (modelos lineales y modelos lineales generalizados).\nRepeticiones técnicas: Las usamos cuando el enfoque es hacer inferencias sobre un inviduo o probando un método, esto por cuanto es natural que las medidas al venir de una misma unidad experimental estén correlacionadas. En este caso, métodos más complejos son necesarios (modelos lineales mixtos y modelos lineales generalizados mixtos).\n\nExisten tambien los casos donde ambos tipos de repetición son usados. Ejemplo: para determinar la eficiencia de un insecticida en 3 parcelas experimentales (repeticiones biológicas), se realizan conteos de larvas/insectos en 4 puntos dentro de cada una (repeticiones técnicas).\n\n\n\nPara mayor información, visita este enlace"
   },
   {
     "objectID": "index.html#sobre-las-repeticiones-3",
@@ -109,14 +109,14 @@
     "href": "index.html#sobre-el-tamaño-de-la-muestra",
     "title": "Estadística aplicada con R",
     "section": "Sobre el tamaño de la muestra",
-    "text": "Sobre el tamaño de la muestra\n\nYa que hemos hablado de las repeticiones, ¿has escuchado del número 30?\n\n\n30 es el número mágico considerado como el mínimo de observaciones requeridas para llevar a cabo un experimento.\nComo otros números en estadística, proviene de convenciones adoptadas a lo largo del tiempo mas que de teoremas completamente indiscutidos.\nEl número 30 ha sido demostrado como una falacia en diversas ocasiones\nSin embargo, 30 es un buen punto de inicio si conocimiento bibliográfico o pre-experimentos no están disponibles para llevar a cabo análisis de poder."
+    "text": "Sobre el tamaño de la muestra\n\nYa que hemos hablado de las repeticiones, ¿has escuchado del número 30?\n\n\n30 es el número mágico considerado como el mínimo de observaciones requeridas para llevar a cabo un experimento.\nComo otros números en estadística, proviene de convenciones adoptadas a lo largo del tiempo más que de teoremas completamente indiscutidos.\nEl número 30 ha sido demostrado como una falacia en diversas ocasiones\nSin embargo, 30 es un buen punto de inicio si conocimiento bibliográfico o pre-experimentos no están disponibles para llevar a cabo análisis de poder."
   },
   {
     "objectID": "index.html#ahora-sí-momento-de-planear-nuestro-experimento",
     "href": "index.html#ahora-sí-momento-de-planear-nuestro-experimento",
     "title": "Estadística aplicada con R",
     "section": "Ahora sí, ¡momento de planear nuestro experimento!",
-    "text": "Ahora sí, ¡momento de planear nuestro experimento!\n\n\nUna vez que hemos repasado los fundamentos del DDE, la pregunta que cabe es: ¿Cómo planeo ya sea un DCA, un DBCA o un DFC?\nDebemos tener en mente que los pilares más importantes a considerar, son las repeticiones y la randomización. El balance viene a ser más un aspecto operacional.\nEl llevar a cabo una buena randomización puede resultar desafiante, sobre todo conforme la complejidad del diseño experimental aumenta.\nPuede llevarse a cabo de manera manual (lanzando una moneda por ejemplo). Sin embargo, toda práctica manual puede tender a imponer sesgo.\nAfortunadamente contamos con la ayuda de la librería FielDHub, así que antes de hablar en mayor detalle de ella, instalémosla\n\n\n\n\ninstall.packages(\"FielDHub\")"
+    "text": "Ahora sí, ¡momento de planear nuestro experimento!\n\n\nUna vez que hemos repasado los fundamentos del DDE, la pregunta que cabe es: ¿Cómo planeo ya sea un DCA, un DBCA, un DFC o un DCL?\nDebemos tener en mente que los pilares más importantes a considerar, son las repeticiones y la randomización. El balance viene a ser más un aspecto operacional.\nEl llevar a cabo una buena randomización puede resultar desafiante, sobre todo conforme la complejidad del diseño experimental aumenta.\nPuede llevarse a cabo de manera manual (lanzando una moneda por ejemplo). Sin embargo, toda práctica manual puede tender a imponer sesgo.\nAfortunadamente contamos con la ayuda de la librería FielDHub, así que antes de hablar en mayor detalle de ella, instalémosla\n\n\n\n\ninstall.packages(\"FielDHub\")"
   },
   {
     "objectID": "index.html#librería-fieldhub",
@@ -130,7 +130,7 @@
     "href": "index.html#diseño-completamente-al-azar-dca",
     "title": "Estadística aplicada con R",
     "section": "Diseño completamente al azar (DCA)",
-    "text": "Diseño completamente al azar (DCA)\n\n\nConsidera las dos fuentes base de variación (dentro y entre tratamientos).\nRegresando al ejemplo de nuestras bacterias, ¿cómo planeamos un DCA?.\nTenemos las cepas bacterianas A, B, C y D, y por el momento supongamos solo queremos saber si son capaces de reducir N a una misma concentración (algo como un screening previo en nuestra experimentación)\n\n\n\n\nlibrary(FielDHub)                    \ndca.bacterias <- CRD(t = 4,                  # número de tratamientos    \n                     reps = 3,               # número de repeticiones por tratamiento\n                     plotNumber = 101,       # número que asignamos al primer tratamiento\n                     locationName = \"Quito\", # nombre del lugar donde se lleva a cabo el experimento\n                     seed = 123)             # número que hace reproducible el diseño"
+    "text": "Diseño completamente al azar (DCA)\n\n\nConsidera las dos fuentes base de variación (dentro y entre tratamientos).\nRegresando al ejemplo de nuestras bacterias, ¿cómo planeamos un DCA?.\nTenemos las cepas bacterianas A, B, C y D, y por el momento supongamos solo queremos saber si son capaces de reducir N a una misma concentración (algo como un screening previo en nuestra experimentación)\n\n\n\n\nlibrary(FielDHub)                    \ndca.bacterias &lt;- CRD(t = 4,                  # número de tratamientos    \n                     reps = 3,               # número de repeticiones por tratamiento\n                     plotNumber = 101,       # número que asignamos al primer tratamiento\n                     locationName = \"Quito\", # nombre del lugar donde se lleva a cabo el experimento\n                     seed = 123)             # número que hace reproducible el diseño"
   },
   {
     "objectID": "index.html#diseño-completamente-al-azar-dca-1",
@@ -165,7 +165,7 @@
     "href": "index.html#diseño-completamente-al-azar-dca-5",
     "title": "Estadística aplicada con R",
     "section": "Diseño completamente al azar (DCA)",
-    "text": "Diseño completamente al azar (DCA)\n\nUnos toques finales\n\n\n\ntrt <- c(\"Cepa_A\",\n         \"Cepa_B\",\n         \"Cepa_C\",\n         \"Cepa_D\")\n\ntrt_lista <- data.frame(list(TREATMENT = trt, REP = 3))\n\ndca.bacterias_2 <- CRD(t = NULL,\n                       reps = NULL,\n                       plotNumber = 101,\n                       seed = 123,\n                       locationName = \"Quito\",\n                       data = trt_lista)\n\n\n\nplot(dca.bacterias_2)"
+    "text": "Diseño completamente al azar (DCA)\n\nUnos toques finales\n\n\n\ntrt &lt;- c(\"Cepa_A\",\n         \"Cepa_B\",\n         \"Cepa_C\",\n         \"Cepa_D\")\n\ntrt_lista &lt;- data.frame(list(TREATMENT = trt, REP = 3))\n\ndca.bacterias_2 &lt;- CRD(t = NULL,\n                       reps = NULL,\n                       plotNumber = 101,\n                       seed = 123,\n                       locationName = \"Quito\",\n                       data = trt_lista)\n\n\n\nplot(dca.bacterias_2)"
   },
   {
     "objectID": "index.html#diseño-completamente-al-azar-dca-6",
@@ -193,7 +193,7 @@
     "href": "index.html#diseño-en-bloques-completamente-al-azar-dbca-1",
     "title": "Estadística aplicada con R",
     "section": "Diseño en bloques completamente al azar (DBCA)",
-    "text": "Diseño en bloques completamente al azar (DBCA)\n\ndbca.bacterias <- RCBD(t = NULL,\n                       reps = 3,               # importante!     \n                       l = 1,                  # número de locaciones\n                       plotNumber = 101,       \n                       locationNames = \"Quito\", \n                       seed = 123,\n                       data = trt_lista)       \n\n\n\n\ndbca.bacterias$fieldBook\n\n   ID LOCATION PLOT REP TREATMENT\n1   1    QUITO  101   1    Cepa_C\n2   2    QUITO  102   1    Cepa_D\n3   3    QUITO  103   1    Cepa_A\n4   4    QUITO  104   1    Cepa_B\n8   5    QUITO  201   2    Cepa_A\n7   6    QUITO  202   2    Cepa_D\n6   7    QUITO  203   2    Cepa_B\n5   8    QUITO  204   2    Cepa_C\n9   9    QUITO  301   3    Cepa_C\n10 10    QUITO  302   3    Cepa_A\n11 11    QUITO  303   3    Cepa_B\n12 12    QUITO  304   3    Cepa_D\n\n\n\n\nplot(dbca.bacterias)"
+    "text": "Diseño en bloques completamente al azar (DBCA)\n\ndbca.bacterias &lt;- RCBD(t = NULL,\n                       reps = 3,               # importante!     \n                       l = 1,                  # número de locaciones\n                       plotNumber = 101,       \n                       locationNames = \"Quito\", \n                       seed = 123,\n                       data = trt_lista)       \n\n\n\n\ndbca.bacterias$fieldBook\n\n   ID LOCATION PLOT REP TREATMENT\n1   1    QUITO  101   1    Cepa_C\n2   2    QUITO  102   1    Cepa_D\n3   3    QUITO  103   1    Cepa_A\n4   4    QUITO  104   1    Cepa_B\n8   5    QUITO  201   2    Cepa_A\n7   6    QUITO  202   2    Cepa_D\n6   7    QUITO  203   2    Cepa_B\n5   8    QUITO  204   2    Cepa_C\n9   9    QUITO  301   3    Cepa_C\n10 10    QUITO  302   3    Cepa_A\n11 11    QUITO  303   3    Cepa_B\n12 12    QUITO  304   3    Cepa_D\n\n\n\n\nplot(dbca.bacterias)"
   },
   {
     "objectID": "index.html#ejercicio-2.2",
@@ -214,7 +214,7 @@
     "href": "index.html#diseño-factorial-completo-dfc-1",
     "title": "Estadística aplicada con R",
     "section": "Diseño factorial completo (DFC)",
-    "text": "Diseño factorial completo (DFC)\n\n\nEs decir, hasta el momento, nuestros tratamientos están definidos por dos factores:\n\nLas 4 cepas bacterianas\nUna única concentración de N\n\n¿Qué tienen en común estos dos factores? ¡ambos son controlados por el investigador!\nEn resumen, un tratamiento se define cómo el uso de un solo factor o la combinación de dos o más factores a evaluar en un conjunto (muestra) de unidades experimentales y sobre los cuales el investigador tiene total control.\nUn factor está conformado por \\(n\\) niveles, en nuestro ejemplo hasta el momento tenemos lo siguiente:\n\nFactor 1: Cepa\n\nNiveles: 4 (“A”, “B”, “C” y “D”)\n\nFactor 2: Concentración de N\n\nNiveles: 1 (una misma concentración de N para todos los niveles del factor 1)"
+    "text": "Diseño factorial completo (DFC)\n\n\nEs decir, hasta el momento, nuestros tratamientos están definidos por dos factores:\n\nLas 4 cepas bacterianas\nUna única concentración de N\n\n¿Qué tienen en común estos dos factores? ¡ambos son controlados por el investigador!\nEn resumen, un tratamiento se define cómo el uso de un solo factor o la combinación de dos o más factores a evaluar en un conjunto (muestra) de unidades experimentales y sobre los cuales el investigador tiene control.\nUn factor está conformado por \\(n\\) niveles, en nuestro ejemplo hasta el momento tenemos lo siguiente:\n\nFactor 1: Cepa\n\nNiveles: 4 (“A”, “B”, “C” y “D”)\n\nFactor 2: Concentración de N\n\nNiveles: 1 (una misma concentración de N para todos los niveles del factor 1)"
   },
   {
     "objectID": "index.html#diseño-factorial-completo-dfc-2",
@@ -228,21 +228,21 @@
     "href": "index.html#diseño-factorial-completo-dfc-3",
     "title": "Estadística aplicada con R",
     "section": "Diseño factorial completo (DFC)",
-    "text": "Diseño factorial completo (DFC)\nDCA factorial completo\n\nFACTORS <- rep(c(\"CEPA\", \"N\"), c(4,3))\nLEVELS <- c(\"A\", \"B\", \"C\", \"D\", \"N1\", \"N2\", \"N3\")\ndata_factorial <- data.frame(list(FACTOR = FACTORS, LEVEL = LEVELS))\n\ndfc.dca.bacterias <- full_factorial(setfactors = NULL,\n                                    reps = 3,\n                                    l = 1,\n                                    type = 1,\n                                    plotNumber = 101,\n                                    seed = 123,\n                                    locationNames = \"Quito\",\n                                    data = data_factorial)\n\n\n\n\nhead(dfc.dca.bacterias$fieldBook, 14)\n\n   ID LOCATION PLOT REP FACTOR_CEPA FACTOR_N TRT_COMB\n1   1    Quito  101   3           A       N3     A*N3\n2   2    Quito  102   2           B       N1     B*N1\n3   3    Quito  103   3           D       N3     D*N3\n4   4    Quito  104   1           B       N3     B*N3\n5   5    Quito  105   1           B       N3     B*N3\n6   6    Quito  106   1           A       N1     A*N1\n7   7    Quito  107   2           C       N3     C*N3\n8   8    Quito  108   1           A       N1     A*N1\n9   9    Quito  109   2           D       N2     D*N2\n10 10    Quito  110   3           B       N2     B*N2\n11 11    Quito  111   3           B       N2     B*N2\n12 12    Quito  112   1           A       N1     A*N1\n13 13    Quito  113   2           D       N2     D*N2\n14 14    Quito  114   1           D       N1     D*N1\n\n\n\n\nplot(dfc.dca.bacterias)"
+    "text": "Diseño factorial completo (DFC)\nDCA factorial completo\n\nFACTORS &lt;- rep(c(\"CEPA\", \"N\"), c(4,3))\nLEVELS &lt;- c(\"A\", \"B\", \"C\", \"D\", \"N1\", \"N2\", \"N3\")\ndata_factorial &lt;- data.frame(list(FACTOR = FACTORS, LEVEL = LEVELS))\n\ndfc.dca.bacterias &lt;- full_factorial(setfactors = NULL,\n                                    reps = 3,\n                                    l = 1,\n                                    type = 1,\n                                    plotNumber = 101,\n                                    seed = 123,\n                                    locationNames = \"Quito\",\n                                    data = data_factorial)\n\n\n\n\nhead(dfc.dca.bacterias$fieldBook, 14)\n\n   ID LOCATION PLOT REP FACTOR_CEPA FACTOR_N TRT_COMB\n1   1    Quito  101   3           A       N3     A*N3\n2   2    Quito  102   2           B       N1     B*N1\n3   3    Quito  103   3           D       N3     D*N3\n4   4    Quito  104   1           B       N3     B*N3\n5   5    Quito  105   1           B       N3     B*N3\n6   6    Quito  106   1           A       N1     A*N1\n7   7    Quito  107   2           C       N3     C*N3\n8   8    Quito  108   1           A       N1     A*N1\n9   9    Quito  109   2           D       N2     D*N2\n10 10    Quito  110   3           B       N2     B*N2\n11 11    Quito  111   3           B       N2     B*N2\n12 12    Quito  112   1           A       N1     A*N1\n13 13    Quito  113   2           D       N2     D*N2\n14 14    Quito  114   1           D       N1     D*N1\n\n\n\n\nplot(dfc.dca.bacterias)"
   },
   {
     "objectID": "index.html#diseño-factorial-completo-dfc-4",
     "href": "index.html#diseño-factorial-completo-dfc-4",
     "title": "Estadística aplicada con R",
     "section": "Diseño factorial completo (DFC)",
-    "text": "Diseño factorial completo (DFC)\nDBCA factorial completo\n\ndfc.dbca.bacterias <- full_factorial(setfactors = NULL,\n                                     reps = 3,\n                                     l = 1,\n                                     type = 2,\n                                     plotNumber = 101,\n                                     seed = 123,\n                                     locationNames = \"Quito\",\n                                     data = data_factorial)\n\n\n\n\nhead(dfc.dbca.bacterias$fieldBook, 14)\n\n   ID LOCATION PLOT REP FACTOR_CEPA FACTOR_N TRT_COMB\n1   1    Quito  101   1           D       N2     D*N2\n2   2    Quito  102   1           B       N1     B*N1\n3   3    Quito  103   1           A       N2     A*N2\n4   4    Quito  104   1           B       N3     B*N3\n5   5    Quito  105   1           A       N3     A*N3\n6   6    Quito  106   1           C       N3     C*N3\n7   7    Quito  107   1           D       N3     D*N3\n8   8    Quito  108   1           A       N1     A*N1\n9   9    Quito  109   1           B       N2     B*N2\n10 10    Quito  110   1           C       N1     C*N1\n11 11    Quito  111   1           D       N1     D*N1\n12 12    Quito  112   1           C       N2     C*N2\n24 13    Quito  201   2           A       N3     A*N3\n23 14    Quito  202   2           B       N2     B*N2\n\n\n\n\nplot(dfc.dbca.bacterias)"
+    "text": "Diseño factorial completo (DFC)\nDBCA factorial completo\n\ndfc.dbca.bacterias &lt;- full_factorial(setfactors = NULL,\n                                     reps = 3,\n                                     l = 1,\n                                     type = 2,\n                                     plotNumber = 101,\n                                     seed = 123,\n                                     locationNames = \"Quito\",\n                                     data = data_factorial)\n\n\n\n\nhead(dfc.dbca.bacterias$fieldBook, 14)\n\n   ID LOCATION PLOT REP FACTOR_CEPA FACTOR_N TRT_COMB\n1   1    Quito  101   1           D       N2     D*N2\n2   2    Quito  102   1           B       N1     B*N1\n3   3    Quito  103   1           A       N2     A*N2\n4   4    Quito  104   1           B       N3     B*N3\n5   5    Quito  105   1           A       N3     A*N3\n6   6    Quito  106   1           C       N3     C*N3\n7   7    Quito  107   1           D       N3     D*N3\n8   8    Quito  108   1           A       N1     A*N1\n9   9    Quito  109   1           B       N2     B*N2\n10 10    Quito  110   1           C       N1     C*N1\n11 11    Quito  111   1           D       N1     D*N1\n12 12    Quito  112   1           C       N2     C*N2\n24 13    Quito  201   2           A       N3     A*N3\n23 14    Quito  202   2           B       N2     B*N2\n\n\n\n\nplot(dfc.dbca.bacterias)"
   },
   {
     "objectID": "index.html#ejercicio-2.3",
     "href": "index.html#ejercicio-2.3",
     "title": "Estadística aplicada con R",
     "section": "Ejercicio 2.3",
-    "text": "Ejercicio 2.3\nEn nuestro ejemplo de las bacterias degradadoras de N:\n\nEl investigador está también interesado en evaluar la reducción de fósforo en 3 concentraciones (P1, P2 y P3)\n\n¿Cómo serían las disposiciones de las botellas de medio de cultivo bajo un DCA y un DBCA factoriales completos si queremos 3 repeticiones?\n¿Cuál es el número total de tratamientos ahora?"
+    "text": "Ejercicio 2.3\nEn nuestro ejemplo de las bacterias degradadoras de N:\n\nEl investigador ha decidido deshechar la cepa D por encontrarla poco eficiente en ensayos separados, por lo tanto el factor bacteria ahora cuenta únicamente con tres niveles.\nAdemás, está también interesado en evaluar la reducción de fósforo en 3 concentraciones (P1, P2 y P3)\n\n¿Cómo serían las disposiciones de las botellas de medio de cultivo bajo un DCA y un DBCA factoriales completos si queremos 3 repeticiones?\n¿Cuál es el número total de tratamientos ahora?\n¿Cuál es el número total de unidades experimentales ahora?"
   },
   {
     "objectID": "index.html#usando-el-fieldbook",
@@ -298,27 +298,48 @@
     "href": "index.html#por-qué-randomizar-2",
     "title": "Estadística aplicada con R",
     "section": "¿Por qué randomizar?",
-    "text": "¿Por qué randomizar?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#### un NO DCA ####\nno.dca <- data.frame(rendimiento = c(7.6, 7.4, 7.2, 7.0,\n                                     8.1, 7.6, 7.3, 7.0,\n                                     8.3, 8.1, 7.9, 7.3,\n                                     8.8, 8.5, 8.0, 7.7,\n                                     9.0, 8.6, 8.4, 8.0),\n                     tratamiento = c(rep(\"A\", 4), rep(\"B\", 4), rep(\"C\", 4),\n                                     rep(\"D\", 4), rep(\"E\",4)))"
+    "text": "¿Por qué randomizar?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#### un NO DCA ####\nno.dca &lt;- data.frame(rendimiento = c(7.6, 7.4, 7.2, 7.0,\n                                     8.1, 7.6, 7.3, 7.0,\n                                     8.3, 8.1, 7.9, 7.3,\n                                     8.8, 8.5, 8.0, 7.7,\n                                     9.0, 8.6, 8.4, 8.0),\n                     tratamiento = c(rep(\"A\", 4), rep(\"B\", 4), rep(\"C\", 4),\n                                     rep(\"D\", 4), rep(\"E\",4)))"
   },
   {
     "objectID": "index.html#por-qué-randomizar-3",
     "href": "index.html#por-qué-randomizar-3",
     "title": "Estadística aplicada con R",
     "section": "¿Por qué randomizar?",
-    "text": "¿Por qué randomizar?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfit1 <- lm(rendimiento ~ tratamiento, data = no.dca)\nanova(fit1)\n\nAnalysis of Variance Table\n\nResponse: rendimiento\n            Df Sum Sq Mean Sq F value   Pr(>F)   \ntratamiento  4  4.008   1.002  5.6292 0.005681 **\nResiduals   15  2.670   0.178                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
+    "text": "¿Por qué randomizar?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfit1 &lt;- lm(rendimiento ~ tratamiento, data = no.dca)\nanova(fit1)\n\nAnalysis of Variance Table\n\nResponse: rendimiento\n            Df Sum Sq Mean Sq F value   Pr(&gt;F)   \ntratamiento  4  4.008   1.002  5.6292 0.005681 **\nResiduals   15  2.670   0.178                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1"
   },
   {
     "objectID": "index.html#por-qué-randomizar-4",
     "href": "index.html#por-qué-randomizar-4",
     "title": "Estadística aplicada con R",
     "section": "¿Por qué randomizar?",
-    "text": "¿Por qué randomizar?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#### un DCA ####\ntratamientos <- rep(c(\"A\", \"B\", \"C\", \"D\", \"E\"), 4)\nset.seed(123)\nsi.dca <- data.frame(rendimiento = c(7.6, 7.4, 7.2, 7.0,\n                                     8.1, 7.6, 7.3, 7.0,\n                                     8.3, 8.1, 7.9, 7.3,\n                                     8.8, 8.5, 8.0, 7.7,\n                                     9.0, 8.6, 8.4, 8.0),\n                     tratamiento = sample(tratamientos))"
+    "text": "¿Por qué randomizar?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n#### un DCA ####\ntratamientos &lt;- rep(c(\"A\", \"B\", \"C\", \"D\", \"E\"), 4)\nset.seed(123)\nsi.dca &lt;- data.frame(rendimiento = c(7.6, 7.4, 7.2, 7.0,\n                                     8.1, 7.6, 7.3, 7.0,\n                                     8.3, 8.1, 7.9, 7.3,\n                                     8.8, 8.5, 8.0, 7.7,\n                                     9.0, 8.6, 8.4, 8.0),\n                     tratamiento = sample(tratamientos))"
   },
   {
     "objectID": "index.html#por-qué-randomizar-5",
     "href": "index.html#por-qué-randomizar-5",
     "title": "Estadística aplicada con R",
     "section": "¿Por qué randomizar?",
-    "text": "¿Por qué randomizar?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfit2 <- lm(rendimiento ~ tratamiento, data = si.dca)\nanova(fit2)\n\nAnalysis of Variance Table\n\nResponse: rendimiento\n            Df Sum Sq Mean Sq F value Pr(>F)\ntratamiento  4  1.053 0.26325   0.702 0.6026\nResiduals   15  5.625 0.37500"
+    "text": "¿Por qué randomizar?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nfit2 &lt;- lm(rendimiento ~ tratamiento, data = si.dca)\nanova(fit2)\n\nAnalysis of Variance Table\n\nResponse: rendimiento\n            Df Sum Sq Mean Sq F value Pr(&gt;F)\ntratamiento  4  1.053 0.26325   0.702 0.6026\nResiduals   15  5.625 0.37500"
+  },
+  {
+    "objectID": "index.html#diseño-cuadrado-latino-dcl",
+    "href": "index.html#diseño-cuadrado-latino-dcl",
+    "title": "Estadística aplicada con R",
+    "section": "Diseño Cuadrado Latino (DCL)",
+    "text": "Diseño Cuadrado Latino (DCL)\n\n\nSe lo puede considerar como una extensión del DBCA factorial al incluir una variable más de bloque para reducir la variación (error) experimental.\nLa ventaja de este tipo de diseños es que fraccionan (reducen) el número de unidades experimentales que serían necesarias para un DBCA factorial.\nComo condición presenta que el número de niveles de cada factor debe ser el mismo.\nAsí, en nuestro ejercicio anterior al retirar la cepa D, tendríamos como base del diseño experimental los siguientes factores/niveles\n\nFactor 1: Cepa\n\nNiveles: 3 (“A”, “B”, “C”)\n\nFactor 2: Concentración de N\n\nNiveles: 3 (“N1”, “N2”, “N3”)\n\nFactor 3: Concentración de P\n\nNiveles: 3 (“P1”, “P2”, “P3”)"
+  },
+  {
+    "objectID": "index.html#diseño-cuadrado-latino-dcl-1",
+    "href": "index.html#diseño-cuadrado-latino-dcl-1",
+    "title": "Estadística aplicada con R",
+    "section": "Diseño Cuadrado Latino (DCL)",
+    "text": "Diseño Cuadrado Latino (DCL)\n\n\nBajo un DBCA factorial con 3 repeticiones, necesitaríamos 81 unidades experimentales, mientras que bajo un DCL, necesitaríamos 27.\nEn otras palabras, podemos generalizar el número total de observaciones si aplicamos la siguiente fórmula: siendo \\(K\\) el número de niveles en un diseño factorial de 3 factores, el número total de unidades experimentales que necesitamos es igual a:\n\n\n\n\\[\\begin{align}\n\\text{UE} &=\\text{número de repeticiones} \\times K^2\n\\end{align}\\]\n\nEsta reducción en el número de unidades experimentales es conseguido gracias a arreglos especiales de las unidades experimentales (no nos adentraremos en detalle, pero si estás más interesado, puedes consultar este enlace)"
+  },
+  {
+    "objectID": "index.html#diseño-cuadrado-latino-dcl-2",
+    "href": "index.html#diseño-cuadrado-latino-dcl-2",
+    "title": "Estadística aplicada con R",
+    "section": "Diseño Cuadrado Latino (DCL)",
+    "text": "Diseño Cuadrado Latino (DCL)\n\nlatin_data &lt;- data.frame(list(ROW = paste(\"P\", 1:3, sep = \"\"),\n                              COLUMN = paste(\"N\", 1:3, sep = \"\"),\n                              TREATMENT = paste(\"Cepa\", 1:3, sep =\"\")))\n\ndcl.bacterias &lt;- latin_square(t = NULL,\n                              reps = 3,\n                              plotNumber = 101,\n                              locationNames = \"Quito\",\n                              seed = 1985,\n                              data = latin_data)\n\n\n\n\nhead(dcl.bacterias$fieldBook, 14)\n\n   ID LOCATION PLOT SQUARE ROW COLUMN TREATMENT\n1   1    Quito  101      1  P1     N1     Cepa3\n2   2    Quito  102      1  P1     N2     Cepa1\n3   3    Quito  103      1  P1     N3     Cepa2\n4   4    Quito  106      1  P2     N1     Cepa2\n5   5    Quito  105      1  P2     N2     Cepa3\n6   6    Quito  104      1  P2     N3     Cepa1\n7   7    Quito  107      1  P3     N1     Cepa1\n8   8    Quito  108      1  P3     N2     Cepa2\n9   9    Quito  109      1  P3     N3     Cepa3\n10 10    Quito  201      2  P1     N1     Cepa2\n11 11    Quito  202      2  P1     N2     Cepa1\n12 12    Quito  203      2  P1     N3     Cepa3\n13 13    Quito  206      2  P2     N1     Cepa3\n14 14    Quito  205      2  P2     N2     Cepa2\n\n\n\n\nplot(dcl.bacterias)"
   }
 ]
