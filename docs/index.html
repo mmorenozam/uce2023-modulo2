@@ -543,9 +543,35 @@ Mauricio Moreno, PhD
 <li>Consultar a un experto en estadística</li>
 </ul>
 </div>
+</section></section>
+<section>
+<section id="categorías-del-diseño-de-experimentos-dde" class="title-slide slide level1 smaller center">
+<h1>Categorías del Diseño de Experimentos (DDE)</h1>
+
 </section>
-<section id="pilares-del-diseño-de-experimentos-dde" class="slide level2">
-<h2>Pilares del Diseño de Experimentos (DDE)</h2>
+<section id="categorías-del-dde" class="slide level2">
+<h2>Categorías del DDE</h2>
+<div>
+<ul>
+<li class="fragment"><p>Existen dos categorías de DDE</p>
+<ul>
+<li class="fragment"><p>Tradicionales (cómo los que cubriremos en breve), y</p></li>
+<li class="fragment"><p>Modernos (conocidos como óptimos)</p></li>
+</ul></li>
+<li class="fragment"><p>La diferencia fundamental entre estas dos categorías gira en torno a la necesidad (tradicionales) o no (modernos) de basarse en la ortogonalidad.</p></li>
+<li class="fragment"><p>Sin entrar en mayor detalle, podemos decir que el principio de ortogonalidad “garantiza” la independencia entre las observaciones para así evitar correlaciones entre estas.</p></li>
+<li class="fragment"><p>Los DDE óptimos, al no requerir ortogonalidad, reducen el costo de una experimentación de manera considerable al requerir menos observaciones.</p></li>
+<li class="fragment"><p>Y, cómo es de esperar, su planeamiento es mucho más complejo, requieren casi siempre de un experto estadístico y a veces de Software específico (como por ejemplo JMP).</p></li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="pilares-del-diseño-de-experimentos-dde" class="title-slide slide level1 center">
+<h1>Pilares del Diseño de Experimentos (DDE)</h1>
+
+</section>
+<section id="pilares-del-dde" class="slide level2">
+<h2>Pilares del DDE</h2>
 <div>
 <ol type="1">
 <li class="fragment"><p><strong>Repetición/Replicación:</strong> es la aplicación de los tratamientos a un determinado número de unidades experimentales (al menos 3). Puede ser igual al tamaño de muestra en ciertos casos.</p></li>
@@ -554,7 +580,7 @@ Mauricio Moreno, PhD
 </ol>
 </div>
 </section>
-<section id="pilares-del-dde" class="slide level2" data-visibility="uncounted">
+<section id="pilares-del-dde-1" class="slide level2" data-visibility="uncounted">
 <h2>Pilares del DDE</h2>
 <div>
 <ul>
@@ -569,7 +595,7 @@ Mauricio Moreno, PhD
 </div>
 </div>
 </section>
-<section id="pilares-del-dde-1" class="slide level2" data-visibility="uncounted">
+<section id="pilares-del-dde-2" class="slide level2" data-visibility="uncounted">
 <h2>Pilares del DDE</h2>
 <div>
 <ul>
@@ -580,7 +606,7 @@ Mauricio Moreno, PhD
 </ul>
 </div>
 </section>
-<section id="pilares-del-dde-2" class="slide level2" data-visibility="uncounted">
+<section id="pilares-del-dde-3" class="slide level2" data-visibility="uncounted">
 <h2>Pilares del DDE</h2>
 <div>
 <ul>
@@ -915,6 +941,23 @@ List of 5
 </div>
 </div>
 </section>
+<section id="ventajas-y-desventajas-del-dca" class="slide level2">
+<h2>Ventajas y desventajas del DCA</h2>
+<div>
+<ul>
+<li class="fragment"><p><strong>Ventajas</strong>:</p>
+<ul>
+<li class="fragment"><p>Su implementación y análisis son los más sencillos de todos los DDE</p></li>
+<li class="fragment"><p>Es flexible (permite cualquier número de tratamientos, repeticiones)</p></li>
+</ul></li>
+<li class="fragment"><p><strong>Desventajas</strong>:</p>
+<ul>
+<li class="fragment"><p>Su implementación está limitada a ambientes muy bien controlados y unidades experimentales dentro de cada tratamiento bastante homogéneas. Por ello, es muy dificil su implementación en ambientes abiertos (por ejemplo, experimentos al aire libre).</p></li>
+<li class="fragment"><p>Al no controlar otras fuentes de variación, es menos preciso que otros diseños.</p></li>
+</ul></li>
+</ul>
+</div>
+</section>
 <section id="ejercicio-2.1" class="slide level2">
 <h2>Ejercicio 2.1</h2>
 <p>¿Cuál sería la disposición de las botellas en una estantería bajo un DCA, si tenemos 6 cepas (“cepa_1” hasta “cepa_6”) y planeamos tener 4 repeticiones por tratamiento?, (utiliza <code>seed = 1460</code>)</p>
@@ -969,6 +1012,22 @@ List of 5
 </div>
 </div>
 </div>
+</div>
+</section>
+<section id="ventajas-y-desventajas-del-dbca" class="slide level2">
+<h2>Ventajas y desventajas del DBCA</h2>
+<div>
+<ul>
+<li class="fragment"><p><strong>Ventajas</strong>:</p>
+<ul>
+<li class="fragment"><p>Tiene mayor precisión que el DCA al controlar una fuente extra de variación.</p></li>
+<li class="fragment"><p>Es mejor que el DCA en experimentos al aire libre.</p></li>
+</ul></li>
+<li class="fragment"><p><strong>Desventajas</strong>:</p>
+<ul>
+<li class="fragment">Cuando el número de tratamientos se incrementa, el número de bloques también. Esto hace que mantener la homogeneidad de los bloques resulte más difícil de controlar.</li>
+</ul></li>
+</ul>
 </div>
 </section>
 <section id="ejercicio-2.2" class="slide level2">
@@ -1127,6 +1186,23 @@ List of 5
 </div>
 </div>
 </section>
+<section id="ventajas-y-desventajas-del-dcf" class="slide level2">
+<h2>Ventajas y desventajas del DCF</h2>
+<div>
+<ul>
+<li class="fragment"><p><strong>Ventajas</strong>:</p>
+<ul>
+<li class="fragment"><p>En este tipo de diseños podemos introducir interacciones entre factores.</p></li>
+<li class="fragment"><p>Puede ayudar a responder varias preguntas a la vez gracias a las múltiples combinaciones entre sus factores.</p></li>
+</ul></li>
+<li class="fragment"><p><strong>Desventajas</strong>:</p>
+<ul>
+<li class="fragment"><p>Puede resultar en enormes números de unidades experimentales a medida que los factores se incrementan.</p></li>
+<li class="fragment"><p>La complejidad de la interpretación de sus resultados aumenta también al introducir más factores, sobre todo de las interacciones entre estos, que muchas veces resultan en conclusiones carentes de sentido.</p></li>
+</ul></li>
+</ul>
+</div>
+</section>
 <section id="ejercicio-2.3" class="slide level2">
 <h2>Ejercicio 2.3</h2>
 <p>En nuestro ejemplo de las bacterias degradadoras de N:</p>
@@ -1226,6 +1302,22 @@ List of 5
 </div>
 </div>
 </div>
+</div>
+</section>
+<section id="ventajas-y-desventajas-del-dcl" class="slide level2">
+<h2>Ventajas y desventajas del DCL</h2>
+<div>
+<ul>
+<li class="fragment"><p><strong>Ventajas</strong>:</p>
+<ul>
+<li class="fragment">DCL es más eficiente que DBCA y DCA gracias al introducir un “bloque” extra. Esto implica el uso de un reducido número de unidades experimentales</li>
+</ul></li>
+<li class="fragment"><p><strong>Desventajas</strong>:</p>
+<ul>
+<li class="fragment"><p>La necesidad de contar con el mismo número de niveles en ambos factores puede ser considerada como una desventaja.</p></li>
+<li class="fragment"><p>Bajo un DCL <strong>NO</strong> se pueden estudiar interacciones entre los factores. Esto debido a que la matriz del modelo no es ortogonal para poder estimar dichos efectos.</p></li>
+</ul></li>
+</ul>
 </div>
 </section>
 <section id="usando-el-fieldbook" class="slide level2">

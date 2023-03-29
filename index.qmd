@@ -165,7 +165,30 @@ editor: visual
 
 -   Consultar a un experto en estadística
 
-## Pilares del Diseño de Experimentos (DDE)
+# Categorías del Diseño de Experimentos (DDE) {.smaller}
+
+## Categorías del DDE
+
+::: incremental
+
+-   Existen dos categorías de DDE
+
+    -   Tradicionales (cómo los que cubriremos en breve), y
+    
+    -   Modernos (conocidos como óptimos)
+
+-   La diferencia fundamental entre estas dos categorías gira en torno a la necesidad (tradicionales) o no (modernos) de basarse en la ortogonalidad.
+
+-   Sin entrar en mayor detalle, podemos decir que el principio de ortogonalidad "garantiza" la independencia entre las observaciones para así evitar correlaciones entre estas.
+
+-   Los DDE óptimos, al no requerir ortogonalidad, reducen el costo de una experimentación de manera considerable al requerir menos observaciones.
+
+-   Y, cómo es de esperar, su planeamiento es mucho más complejo, requieren casi siempre de un experto estadístico y a veces de Software específico (como por ejemplo JMP).
+:::
+
+# Pilares del Diseño de Experimentos (DDE)
+
+## Pilares del DDE
 
 ::: incremental
 1.  **Repetición/Replicación:** es la aplicación de los tratamientos a un determinado número de unidades experimentales (al menos 3). Puede ser igual al tamaño de muestra en ciertos casos.
@@ -292,6 +315,8 @@ Ya que hemos hablado de las repeticiones, **¿has escuchado del número 30?**
 
 -   Sin embargo, 30 es un buen punto de inicio si conocimiento bibliográfico o pre-experimentos no están disponibles para llevar a cabo análisis de poder.
 :::
+
+
 
 ## Ahora sí, ¡momento de planear nuestro experimento! {.smaller}
 
@@ -482,6 +507,25 @@ plot(dca.bacterias_2)
 :::
 :::
 
+## Ventajas y desventajas del DCA
+
+::: incremental
+
+-   **Ventajas**:
+
+    -   Su implementación y análisis son los más sencillos de todos los DDE
+    
+    -   Es flexible (permite cualquier número de tratamientos, repeticiones)
+    
+
+-   **Desventajas**:
+
+    -   Su implementación está limitada a ambientes muy bien controlados y unidades experimentales dentro de cada tratamiento bastante homogéneas. Por ello, es muy dificil su implementación en ambientes abiertos (por ejemplo, experimentos al aire libre).
+    
+    -   Al no controlar otras fuentes de variación, es menos preciso que otros diseños.
+
+:::
+
 ## Ejercicio 2.1
 
 ¿Cuál sería la disposición de las botellas en una estantería bajo un DCA, si tenemos 6 cepas ("cepa_1" hasta "cepa_6") y planeamos tener 4 repeticiones por tratamiento?, (utiliza `seed = 1460`)
@@ -523,6 +567,22 @@ dbca.bacterias$fieldBook
 plot(dbca.bacterias)
 ```
 :::
+:::
+
+## Ventajas y desventajas del DBCA
+
+::: incremental
+
+-   **Ventajas**:
+
+    -   Tiene mayor precisión que el DCA al controlar una fuente extra de variación.
+
+    -   Es mejor que el DCA en experimentos al aire libre.
+
+-   **Desventajas**:
+
+    -   Cuando el número de tratamientos se incrementa, el número de bloques también. Esto hace que mantener la homogeneidad de los bloques resulte más difícil de controlar.
+
 :::
 
 ## Ejercicio 2.2
@@ -643,6 +703,24 @@ plot(dfc.dbca.bacterias)
 :::
 :::
 
+## Ventajas y desventajas del DCF
+
+::: incremental
+
+-   **Ventajas**:
+
+    -   En este tipo de diseños podemos introducir interacciones entre factores.
+    
+    -   Puede ayudar a responder varias preguntas a la vez gracias a las múltiples combinaciones entre sus factores.
+
+-   **Desventajas**:
+
+    -   Puede resultar en enormes números de unidades experimentales a medida que los factores se incrementan.
+    
+    -   La complejidad de la interpretación de sus resultados aumenta también al introducir más factores, sobre todo de las interacciones entre estos, que muchas veces resultan en conclusiones carentes de sentido.
+
+:::
+
 ## Ejercicio 2.3
 
 En nuestro ejemplo de las bacterias degradadoras de N:
@@ -731,7 +809,21 @@ plot(dcl.bacterias)
 :::
 :::
 
+## Ventajas y desventajas del DCL
 
+::: incremental
+
+-   **Ventajas**:
+
+    -   DCL es más eficiente que DBCA y DCA gracias al introducir un "bloque" extra. Esto implica el uso de un reducido número de unidades experimentales
+    
+-   **Desventajas**:
+
+    -   La necesidad de contar con el mismo número de niveles en ambos factores puede ser considerada como una desventaja.
+    
+    -   Bajo un DCL **NO** se pueden estudiar interacciones entre los factores. Esto debido a que la matriz del modelo no es ortogonal para poder estimar dichos efectos. 
+
+:::
 
 ## Usando el `fieldBook`
 
@@ -768,6 +860,8 @@ Exporta las tablas `fieldBook` de los ejercicios anteriores a archivos de Excel.
 ![](images/xls.png){fig-align="center"}
 :::
 :::
+
+
 
 ## Como mantener tus datos óptimamente ordenados {visibility="uncounted"}
 

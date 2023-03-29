@@ -53,21 +53,21 @@
     "href": "index.html#pilares-del-dde",
     "title": "Estadística aplicada con R",
     "section": "Pilares del DDE",
-    "text": "Pilares del DDE\n\n\nEl objetivo general es el explicar (modelar) la variabilidad de un conjunto de datos y cómo en base a esta determinamos si hay o no diferencias entre los tratamientos de los que se originaron los mismos."
+    "text": "Pilares del DDE\n\n\nRepetición/Replicación: es la aplicación de los tratamientos a un determinado número de unidades experimentales (al menos 3). Puede ser igual al tamaño de muestra en ciertos casos.\nAleatoriedad/Randomización: la asignación de unidades experimentales a un tratamiento debe realizarse al azar. Esto evita sesgos en las inferencias estadísticas al precautelar la independencia de los datos recolectados.\nBalance: se refiere al intentar el siempre tener un número igual de unidades experimentales en los tratamientos de interés. Datos no balanceados requieren de métodos estadísticos corregidos."
   },
   {
     "objectID": "index.html#pilares-del-dde-1",
     "href": "index.html#pilares-del-dde-1",
     "title": "Estadística aplicada con R",
     "section": "Pilares del DDE",
-    "text": "Pilares del DDE\n\n\nControlar las condiciones de un experimento, en términos estadísticos refiere a controlar las fuentes de variación.\nA menor variación, más precisas serán nuestras inferencias. Pero frente a cero variación NO es posible ninguna inferencia.\nPor ello necesitamos el contar con mínimo tres repeticiones por tratamiento y randomizar siempre.\nUna pobre randomización no garantiza la independencia de nuestras observaciones y puede llevarnos a obtener resultados sesgados."
+    "text": "Pilares del DDE\n\n\nEl objetivo general es el explicar (modelar) la variabilidad de un conjunto de datos y cómo en base a esta determinamos si hay o no diferencias entre los tratamientos de los que se originaron los mismos."
   },
   {
     "objectID": "index.html#pilares-del-dde-2",
     "href": "index.html#pilares-del-dde-2",
     "title": "Estadística aplicada con R",
     "section": "Pilares del DDE",
-    "text": "Pilares del DDE\n\n\nEn breves rasgos, las fuentes de variación son\n\nVariación dentro de los tratamientos: dada por la diferencia entre las repeticiones dentro de un tratamiento con respecto a su media aritmetica. Es asumida como producto entero del azar.\nVariación entre los tratamientos: dada por la aplicación del tratamiento (factor o factores objeto de estudio). Por ejemplo, la eficiencia de reducir N por tres distintas cepas de bacterias."
+    "text": "Pilares del DDE\n\n\nControlar las condiciones de un experimento, en términos estadísticos refiere a controlar las fuentes de variación.\nA menor variación, más precisas serán nuestras inferencias. Pero frente a cero variación NO es posible ninguna inferencia.\nPor ello necesitamos el contar con mínimo tres repeticiones por tratamiento y randomizar siempre.\nUna pobre randomización no garantiza la independencia de nuestras observaciones y puede llevarnos a obtener resultados sesgados."
   },
   {
     "objectID": "index.html#sobre-las-repeticiones",
@@ -341,5 +341,61 @@
     "title": "Estadística aplicada con R",
     "section": "Diseño Cuadrado Latino (DCL)",
     "text": "Diseño Cuadrado Latino (DCL)\n\nlatin_data &lt;- data.frame(list(ROW = paste(\"P\", 1:3, sep = \"\"),\n                              COLUMN = paste(\"N\", 1:3, sep = \"\"),\n                              TREATMENT = paste(\"Cepa\", 1:3, sep =\"\")))\n\ndcl.bacterias &lt;- latin_square(t = NULL,\n                              reps = 3,\n                              plotNumber = 101,\n                              locationNames = \"Quito\",\n                              seed = 1985,\n                              data = latin_data)\n\n\n\n\nhead(dcl.bacterias$fieldBook, 14)\n\n   ID LOCATION PLOT SQUARE ROW COLUMN TREATMENT\n1   1    Quito  101      1  P1     N1     Cepa3\n2   2    Quito  102      1  P1     N2     Cepa1\n3   3    Quito  103      1  P1     N3     Cepa2\n4   4    Quito  106      1  P2     N1     Cepa2\n5   5    Quito  105      1  P2     N2     Cepa3\n6   6    Quito  104      1  P2     N3     Cepa1\n7   7    Quito  107      1  P3     N1     Cepa1\n8   8    Quito  108      1  P3     N2     Cepa2\n9   9    Quito  109      1  P3     N3     Cepa3\n10 10    Quito  201      2  P1     N1     Cepa2\n11 11    Quito  202      2  P1     N2     Cepa1\n12 12    Quito  203      2  P1     N3     Cepa3\n13 13    Quito  206      2  P2     N1     Cepa3\n14 14    Quito  205      2  P2     N2     Cepa2\n\n\n\n\nplot(dcl.bacterias)"
+  },
+  {
+    "objectID": "index.html#categorías-de-dde",
+    "href": "index.html#categorías-de-dde",
+    "title": "Estadística aplicada con R",
+    "section": "Categorías de DDE",
+    "text": "Categorías de DDE\n\n\nEn este punto, cabe mencionar que existen dos categorías de DDE\n\nTradicionales (cómo los que cubriremos en breve), y\nModernos (conocidos como óptimos)\n\nLa diferencia fundamental entre estas dos categorías gira en torno a la necesidad (tradicionales) o no (modernos) de basarse en la ortogonalidad.\nSin entrar en mayor detalle, podemos decir que el principio de ortogonalidad “garantiza” la independencia entre las observaciones para así evitar correlaciones entre estas.\nLos DDE óptimos, al no requerir ortogonalidad, reducen el costo de una experimentación de manera considerable al requerir menos observaciones.\nY, cómo es de esperar, su planeamiento es mucho más complejo, requieren casi siempre de un experto estadístico y a veces de Software específico (como por ejemplo JMP)."
+  },
+  {
+    "objectID": "index.html#ventajas-y-desventajas-del-dca",
+    "href": "index.html#ventajas-y-desventajas-del-dca",
+    "title": "Estadística aplicada con R",
+    "section": "Ventajas y desventajas del DCA",
+    "text": "Ventajas y desventajas del DCA\n\n\nVentajas:\n\nSu implementación y análisis son los más sencillos de todos los DDE\nEs flexible (permite cualquier número de tratamientos, repeticiones)\n\nDesventajas:\n\nSu implementación está limitada a ambientes muy bien controlados y unidades experimentales dentro de cada tratamiento bastante homogéneas. Por ello, es muy dificil su implementación en ambientes abiertos (por ejemplo, experimentos al aire libre).\nAl no controlar otras fuentes de variación, es menos preciso que otros diseños."
+  },
+  {
+    "objectID": "index.html#categorías-del-dde",
+    "href": "index.html#categorías-del-dde",
+    "title": "Estadística aplicada con R",
+    "section": "Categorías del DDE",
+    "text": "Categorías del DDE\n\n\nExisten dos categorías de DDE\n\nTradicionales (cómo los que cubriremos en breve), y\nModernos (conocidos como óptimos)\n\nLa diferencia fundamental entre estas dos categorías gira en torno a la necesidad (tradicionales) o no (modernos) de basarse en la ortogonalidad.\nSin entrar en mayor detalle, podemos decir que el principio de ortogonalidad “garantiza” la independencia entre las observaciones para así evitar correlaciones entre estas.\nLos DDE óptimos, al no requerir ortogonalidad, reducen el costo de una experimentación de manera considerable al requerir menos observaciones.\nY, cómo es de esperar, su planeamiento es mucho más complejo, requieren casi siempre de un experto estadístico y a veces de Software específico (como por ejemplo JMP)."
+  },
+  {
+    "objectID": "index.html#pilares-del-dde-3",
+    "href": "index.html#pilares-del-dde-3",
+    "title": "Estadística aplicada con R",
+    "section": "Pilares del DDE",
+    "text": "Pilares del DDE\n\n\nEn breves rasgos, las fuentes de variación son\n\nVariación dentro de los tratamientos: dada por la diferencia entre las repeticiones dentro de un tratamiento con respecto a su media aritmetica. Es asumida como producto entero del azar.\nVariación entre los tratamientos: dada por la aplicación del tratamiento (factor o factores objeto de estudio). Por ejemplo, la eficiencia de reducir N por tres distintas cepas de bacterias."
+  },
+  {
+    "objectID": "index.html#ventajas-y-desventajas-del-dbca",
+    "href": "index.html#ventajas-y-desventajas-del-dbca",
+    "title": "Estadística aplicada con R",
+    "section": "Ventajas y desventajas del DBCA",
+    "text": "Ventajas y desventajas del DBCA\n\n\nVentajas:\n\nTiene mayor precisión que el DCA al controlar una fuente extra de variación.\nEs mejor que el DCA en experimentos al aire libre.\n\nDesventajas:\n\nCuando el número de tratamientos se incrementa, el número de bloques también. Esto hace que mantener la homogeneidad de los bloques resulte más difícil de controlar."
+  },
+  {
+    "objectID": "index.html#ventajas-y-desventajas-del-dcf",
+    "href": "index.html#ventajas-y-desventajas-del-dcf",
+    "title": "Estadística aplicada con R",
+    "section": "Ventajas y desventajas del DCF",
+    "text": "Ventajas y desventajas del DCF\n\n\nVentajas:\n\nEn este tipo de diseños podemos introducir interacciones entre factores.\nPuede ayudar a responder varias preguntas a la vez gracias a las múltiples combinaciones entre sus factores.\n\nDesventajas:\n\nPuede resultar en enormes números de unidades experimentales a medida que los factores se incrementan.\nLa complejidad de la interpretación de sus resultados aumenta también al introducir más factores, sobre todo de las interacciones entre estos, que muchas veces resultan en conclusiones carentes de sentido."
+  },
+  {
+    "objectID": "index.html#ventajas-y-desventajas-del-dcl",
+    "href": "index.html#ventajas-y-desventajas-del-dcl",
+    "title": "Estadística aplicada con R",
+    "section": "Ventajas y desventajas del DCL",
+    "text": "Ventajas y desventajas del DCL\n\n\nVentajas:\n\nDCL es más eficiente que DBCA y DCA gracias al introducir un “bloque” extra. Esto implica el uso de un reducido número de unidades experimentales\n\nDesventajas:\n\nLa necesidad de contar con el mismo número de niveles en ambos factores puede ser considerada como una desventaja.\nBajo un DCL NO se pueden estudiar interacciones entre los factores. Esto debido a que la matriz del modelo no es ortogonal para poder estimar dichos efectos."
+  },
+  {
+    "objectID": "index.html#un-consejo",
+    "href": "index.html#un-consejo",
+    "title": "Estadística aplicada con R",
+    "section": "¡Un consejo!",
+    "text": "¡Un consejo!\n\n\nPor razones de tiempo y enfoque del curso, no entramos en mayor detalle en el estudio de la ortogonalidad.\nAgregando brevemente a este principio, los diseños que hemos discutido al igual que muchos otros, tienen límites en cuanto a lo que pueden y no pueden estimar dependiendo de la ortogonalidad.\nUna práctica un tanto empírica que he aprendido con los años, es después de haber establecido los objetivos y lo que quiero estimar de un experimento (llámese interacciones, términos cuadráticos, etc), es generar datos para llenar las matrices de los modelos que he tenido en mente, y ver si son lo suficientemente flexibles para estimar los parámetros en mente."
   }
 ]
