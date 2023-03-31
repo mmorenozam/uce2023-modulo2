@@ -183,7 +183,6 @@ editor: visual
 
 -   Los DDE óptimos, al no requerir ortogonalidad, reducen el costo de una experimentación de manera considerable al requerir menos observaciones.
 
--   Y, cómo es de esperar, su planeamiento es mucho más complejo, requieren casi siempre de un experto estadístico y a veces de Software específico (como por ejemplo JMP).
 :::
 
 # Pilares del Diseño de Experimentos (DDE)

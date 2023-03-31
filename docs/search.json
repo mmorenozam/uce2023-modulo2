@@ -361,7 +361,7 @@
     "href": "index.html#categorías-del-dde",
     "title": "Estadística aplicada con R",
     "section": "Categorías del DDE",
-    "text": "Categorías del DDE\n\n\nExisten dos categorías de DDE\n\nTradicionales (cómo los que cubriremos en breve), y\nModernos (conocidos como óptimos)\n\nLa diferencia fundamental entre estas dos categorías gira en torno a la necesidad (tradicionales) o no (modernos) de basarse en la ortogonalidad.\nSin entrar en mayor detalle, podemos decir que el principio de ortogonalidad “garantiza” la independencia entre las observaciones para así evitar correlaciones entre estas.\nLos DDE óptimos, al no requerir ortogonalidad, reducen el costo de una experimentación de manera considerable al requerir menos observaciones.\nY, cómo es de esperar, su planeamiento es mucho más complejo, requieren casi siempre de un experto estadístico y a veces de Software específico (como por ejemplo JMP)."
+    "text": "Categorías del DDE\n\n\nExisten dos categorías de DDE\n\nTradicionales (cómo los que cubriremos en breve), y\nModernos (conocidos como óptimos)\n\nLa diferencia fundamental entre estas dos categorías gira en torno a la necesidad (tradicionales) o no (modernos) de basarse en la ortogonalidad.\nSin entrar en mayor detalle, podemos decir que el principio de ortogonalidad “garantiza” la independencia entre las observaciones para así evitar correlaciones entre estas.\nLos DDE óptimos, al no requerir ortogonalidad, reducen el costo de una experimentación de manera considerable al requerir menos observaciones."
   },
   {
     "objectID": "index.html#pilares-del-dde-3",
