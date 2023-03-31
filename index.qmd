@@ -230,44 +230,53 @@ editor: visual
     -   **Variación entre los tratamientos**: dada por la aplicación del tratamiento (factor o factores objeto de estudio). Por ejemplo, la eficiencia de reducir N por tres distintas cepas de bacterias.
 :::
 
-## Sobre las repeticiones
+
+## Sobre las repeticiones {.smaller}
 
 . . .
 
-A veces los recursos para llevar a cabo un estudio son limitados y recurrimos a esta práctica para contar con 3 repeticiones por tratamiento:
+A veces los recursos para llevar a cabo un estudio son limitados y recurrimos a una de estas prácticas para contar con 3 repeticiones por tratamiento:
 
 . . .
 
-*Tengo las cepas A, B, C y D de bacterias degradadoras de nitrógeno y quiero saber cual de ellas tiene la mejor eficiencia a tres concentraciones de nitrógeno. Cada botella con caldo de cultivo es voluminosa y no tengo el espacio necesario para llevar a cabo tres repeticiones por tratamiento. Solución: preparo una botella de caldo por cepa y concentración (12 en total) y tomo 3 medidas (repeticiones) de cada una.*
+**Escenario 1:** *Tengo las cepas A, B, C y D de bacterias degradadoras de nitrógeno y quiero saber cual de ellas tiene la mejor eficiencia a tres concentraciones de nitrógeno. Cada botella con caldo de cultivo es voluminosa y no tengo el espacio necesario para llevar a cabo tres repeticiones por tratamiento. [Solución: preparo una botella de caldo por cepa y concentración (12 en total) y tomo 3 medidas (repeticiones) de cada una.]{.fragment}*
 
 . . .
 
-¿Cuál es el problema?[, pues que esta práctica no responderá satisfactoriamente esa pregunta]{.fragment style="color:red;"}
+**Escenario 2:** *Tengo dos semillas experimentales de maíz y quiero saber si existe alguna diferencia en la velocidad de crecimiento de estas con respecto a un control. Sin embargo, no cuento con el suficiente número de macetas (9) para plantar las distintas variedades con sus respectivas repeticiones. [Solución: En su lugar, cuento con tres macetas y decido plantar tres semillas de cada variedad en cada maceta.]{.fragment}*
+
+. . .
+
+¿Cuál es el problema?[, pues que esta prácticas no responderán satisfactoriamente los objetivos de cada investigación]{.fragment style="color:red;"}
 
 ## Sobre las repeticiones {visibility="uncounted"}
 
 ::: incremental
--   Existen dos tipos de repeticiones:
+-   Existen tres tipos de repeticiones:
 
-    -   **Repeticiones biológicas**: Cuando tomamos una y solo una medida de una unidad experimental (en el ejemplo anterior necesitaríamos **36 botellas**, 3 por cada combinación cepa $\times$ concentración de N)
+    -   **Repeticiones biológicas**: Cuando tomamos una y solo una medida de una unidad experimental (en el primer escenario anterior necesitaríamos **36 botellas**, 3 por cada combinación cepa $\times$ concentración de N)
 
-    -   **Repeticiones técnicas**: Cuando tomamos más de una medida de una unidad experimental (lo que vimos en el ejemplo anterior, **12 botellas**, una por cada combinación cepa $\times$ concentración de N)
+    -   **Repeticiones técnicas**: Cuando tomamos más de una medida de una unidad experimental (lo que vimos en el primer escenario anterior, **12 botellas**, una por cada combinación cepa $\times$ concentración de N)
+    
+    
+    -   **Pseudo repeticiones**: Cuando en el mismo espacio físico (sin barreras claramente establecidas) coloco dos o más unidades experimentales correspondientes al mismo tratamiento (este es el caso del segundo escenario anterior).
 :::
 
 ## Sobre las repeticiones {.smaller visibility="uncounted"}
 
 ::: incremental
--   Ambas prácticas son por supuesto adecuadas, siempre y cuando sepamos que se usan para objetivos de investigación distintos, y los métodos de análisis también son distintos:
+-   Todas las prácticas son por supuesto adecuadas, siempre y cuando sepamos que se usan para objetivos de investigación distintos, y los métodos de análisis también son distintos:
 
     -   **Repeticiones biológicas**: Las usamos cuando deseamos hacer inferencias acerca de una población en general. El principio de independencia se mantiene y por tanto requieren metodología estándar (modelos lineales y modelos lineales generalizados).
 
     -   **Repeticiones técnicas**: Las usamos cuando el enfoque es hacer inferencias sobre un inviduo o probando un método, esto por cuanto es natural que las medidas al venir de una misma unidad experimental estén correlacionadas. En este caso, métodos más complejos son necesarios (modelos lineales **mixtos** y modelos lineales generalizados **mixtos**).
+    
+    -   **Pseudo repeticiones**: En la medida de lo posible debemos evitarlas. Sin embargo, es común el no tener otro remedio que utilizarlas cuando las condiciones del experimento así lo demandan. Esto es común en campos como la ecología o la piscicultura. De manera similar las repeticiones técnicas, las pseudo repeticiones afectan el principio de independencia y por tanto también se analizan con métodos como modelos lineales **mixtos** y modelos lineales generalizados **mixtos**.
 
--   Existen tambien los casos donde ambos tipos de repetición son usados. Ejemplo: para determinar la eficiencia de un insecticida en 3 parcelas experimentales (repeticiones biológicas), se realizan conteos de larvas/insectos en 4 puntos dentro de cada una (repeticiones técnicas).
 :::
 
 ::: footer
-Para mayor información, visita este [enlace](https://www.walesgenepark.cardiff.ac.uk/wp-content/uploads/2020/10/WGPtech_replicates.pdf){target="_blank"}
+Para mayor información acerca de repeticiones biológicas y técnicas, visita este [enlace](https://www.walesgenepark.cardiff.ac.uk/wp-content/uploads/2020/10/WGPtech_replicates.pdf){target="_blank"}, y acerca de pseudo repeticiones, visita este otro [enlace](https://vsni.co.uk/case-studies/dealing-with-pseudo-replication-in-linear-mixed-models){target="_blank"}.
 :::
 
 ## Sobre las repeticiones {visibility="uncounted"}
@@ -279,7 +288,7 @@ Para mayor información, visita este [enlace](https://www.walesgenepark.cardiff.
 ::: incremental
 -   Tres repeticiones son una convención que no ha sido demostrada satisfactoriamente, pero es ampliamente adoptada.
 
--   Una manera de determinar de manera técnica el número apropiado de repeticiones es llevar a cabo análisis de poder.
+-   Una manera de determinar de manera fundamentada el número apropiado de repeticiones es llevar a cabo análisis de poder.
 
     -   Los análisis de poder requieren de información previa acerca de la variación esperada y el tamaño del efecto (diferencia entre tratamientos) a detectar.
 
@@ -297,7 +306,7 @@ Para mayor información, visita este [enlace](https://www.walesgenepark.cardiff.
 
 -   Cuando hablamos de un experimento con un solo factor (por ejemplo si tenemos una pregunta puntual cómo si la media aritmética de una muestra difiere de un valor establecido), el número de repeticiones coincide con el tamaño de la muestra.
 
--   Cuando hablamos de un experimento con dos o más factores (un grupo control y otro experimental por ejemplo), el tamaño de la muestra refiere al total de unidades experimentales en todo el experimento, y el número de repeticiones se refiere al número de unidades experimentales **por tratamiento**.
+-   Cuando hablamos de un experimento con dos o más tratamientos (un grupo control y otro experimental por ejemplo), el tamaño de la muestra refiere al total de unidades experimentales en todo el experimento, y el número de repeticiones se refiere al número de unidades experimentales **por tratamiento**.
 :::
 
 ## Sobre el tamaño de la muestra
