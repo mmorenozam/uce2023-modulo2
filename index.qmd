@@ -479,7 +479,7 @@ trt <- c("Cepa_A",
          "Cepa_C",
          "Cepa_D")
 
-trt_lista <- data.frame(list(TREATMENT = trt, REP = 3))
+trt_lista <- data.frame(TREATMENT = trt, REP = 3)
 
 dca.bacterias_2 <- CRD(t = NULL,
                        reps = NULL,
@@ -534,6 +534,24 @@ plot(dca.bacterias_2)
 
 :::
 
+## Ecuación del DCA
+
+-   Matemáticamente un DCA se puede representar con la siguiente fórmula:
+
+$$
+Y_{i,j} = \beta_0 + \beta_i\,\text{Factor}_i + \epsilon
+$$
+
+Donde: 
+
+$Y_{i,j}$: es la observación del factor $i$ de la repetición $j$
+
+$\beta_0$: es el parámetro de locación del modelo
+
+$\beta_i$: es el coeficiente del factor $i$
+
+$\epsilon$: es el error aleatorio del modelo
+
 ## Ejercicio 2.1
 
 ¿Cuál sería la disposición de las botellas en una estantería bajo un DCA, si tenemos 6 cepas ("cepa_1" hasta "cepa_6") y planeamos tener 4 repeticiones por tratamiento?, (utiliza `seed = 1460`)
@@ -555,7 +573,7 @@ plot(dca.bacterias_2)
 ```{r echo=T, eval=T}
 #| code-line-numbers: "1|2|3|4|7"
 dbca.bacterias <- RCBD(t = NULL,
-                       reps = 3,               # importante!     
+                       reps = 3,                    
                        l = 1,                  # número de locaciones
                        plotNumber = 101,       
                        locationNames = "Quito", 
@@ -592,6 +610,21 @@ plot(dbca.bacterias)
     -   Cuando el número de tratamientos se incrementa, el número de bloques también. Esto hace que mantener la homogeneidad de los bloques resulte más difícil de controlar.
 
 :::
+
+## Ecuación del DBCA
+
+$$
+Y_{i,j,k} = \beta_0 + \beta_i\,\text{Factor}_i + \beta_j\,\text{Bloque}_j+ \epsilon
+$$
+
+Donde: 
+
+$Y_{i,j,k}$: es la observación del factor $i$ del bloque $j$ de la repetición $k$
+
+$\beta_i$: es el coeficiente del factor $i$
+
+$\beta_j$: es el coeficiente del bloque $j$
+
 
 ## Ejercicio 2.2
 
@@ -653,7 +686,7 @@ DCA factorial completo
 #| code-line-numbers: "1|2|3|5|6|8|12"
 FACTORS <- rep(c("CEPA", "N"), c(4,3))
 LEVELS <- c("A", "B", "C", "D", "N1", "N2", "N3")
-data_factorial <- data.frame(list(FACTOR = FACTORS, LEVEL = LEVELS))
+data_factorial <- data.frame(FACTOR = FACTORS, LEVEL = LEVELS)
 
 dfc.dca.bacterias <- full_factorial(setfactors = NULL,
                                     reps = 3,
@@ -729,6 +762,21 @@ plot(dfc.dbca.bacterias)
 
 :::
 
+## Ecuación del DCF (de dos factores)
+
+$$
+Y_{i,j,k} = \beta_0 + \beta_i\text{Factor}_i + \beta_j\,\text{Factor}_j + \beta_{ij}\,\text{Factor}_i\times\text{Factor}_j+\epsilon
+$$
+Donde: 
+
+$Y_{i,j,k}$: es la observación del factor $i$ del bloque $j$ de la repetición $k$
+
+$\beta_i$: es el coeficiente del factor $i$
+
+$\beta_j$: es el coeficiente del factor $j$
+
+$\beta_ij$: es el coefficiente de la interacción de los factores $i$ y $j$
+
 ## Ejercicio 2.3
 
 En nuestro ejemplo de las bacterias degradadoras de N:
@@ -748,19 +796,19 @@ En nuestro ejemplo de las bacterias degradadoras de N:
 
 ::: incremental
 
--   Se lo puede considerar como una extensión del DBCA factorial al incluir una variable más de bloque para reducir la variación (error) experimental.
+-   A diferencia del DBCA, el DCL incluye dos factores de bloque en lugar de uno. Además, estos factores de bloque corresponden a variables de interés del investigador (ya no, como en el ejemplo anterior, que los bloques podían corresponder a locaciones físicas por ejemplo)
 
--   La ventaja de este tipo de diseños es que fraccionan (reducen) el número de unidades experimentales que serían necesarias para un DBCA factorial.
+-   La ventaja de este tipo de diseños es que fraccionan (reducen) el número de unidades experimentales que serían necesarias con otros diseños.
 
--   Como condición presenta que el número de niveles de cada factor debe ser el mismo.
+-   Como condición presenta que el número de niveles de todos los factores sean los mismos.
 
 -   Así, en nuestro ejercicio anterior al retirar la cepa D, tendríamos como base del diseño experimental los siguientes factores/niveles
 
-    -   Factor 1: Cepa
+    -   Factor 1: Cepa (tratamiento principal)
         -   Niveles: 3 ("A", "B", "C")
-    -   Factor 2: Concentración de N
+    -   Factor 2: Concentración de N (factor de bloque)
         -   Niveles: 3 ("N1", "N2", "N3")
-    -   Factor 3: Concentración de P
+    -   Factor 3: Concentración de P (factor de bloque)
         -   Niveles: 3 ("P1", "P2", "P3")
 
 :::
@@ -771,7 +819,7 @@ En nuestro ejemplo de las bacterias degradadoras de N:
 
 -   Bajo un DBCA factorial con 3 repeticiones, necesitaríamos 81 unidades experimentales, mientras que bajo un DCL, necesitaríamos 27.
 
--   En otras palabras, podemos generalizar el número total de observaciones si aplicamos la siguiente fórmula: siendo $K$ el número de niveles en un diseño factorial de 3 factores, el número total de unidades experimentales que necesitamos es igual a:
+-   Podemos generalizar el número total de observaciones para un DCL si aplicamos la siguiente fórmula: siendo $K$ el número de niveles todos los factores, el número total de unidades experimentales que necesitamos es igual a:
 :::
 
 . . .
@@ -783,7 +831,9 @@ En nuestro ejemplo de las bacterias degradadoras de N:
 \end{align}
 ```
 
--   Esta reducción en el número de unidades experimentales es conseguido gracias a arreglos especiales de las unidades experimentales (no nos adentraremos en detalle, pero si estás más interesado, puedes consultar [este enlace](http://wpd.ugr.es/~bioestad/wp-content/uploads/Latinos.pdf){target="_blank"})
+-   Esta reducción en el número de unidades experimentales es conseguido gracias a ordenar al azar las unidades experimentales en un cuadrado (de ahí su nombre) donde el número de filas y columnas es igual a $K$ niveles se consideren.
+
+-   Esta optimización de recursos tienen un costo, en un DCL no es posible estimar coeficientes para interacciones.
 
 
 ##  Diseño Cuadrado Latino (DCL) {.smaller visibility="uncounted"}
@@ -832,6 +882,21 @@ plot(dcl.bacterias)
     -   Bajo un DCL **NO** se pueden estudiar interacciones entre los factores. Esto debido a que la matriz del modelo no es ortogonal para poder estimar dichos efectos. 
 
 :::
+
+## Ecuación del DCL
+
+$$
+Y_{i,j,k,l} = \beta_0 + \beta_i\text{Factor}_i + \beta_j\,\text{Fila}_j + \beta_{k}\,\text{Columna}_k+\epsilon
+$$
+
+$Y_{i,j,k,l}$: es la observación del factor $i$ de la fila $j$ de la columna $k$ de la repetición $l$
+
+$\beta_i$: es el coeficiente del factor $i$
+
+$\beta_j$: es el coeficiente de la fila $j$
+
+$\beta_k$: es el coeficiente de la columna $k$
+
 
 ## Usando el `fieldBook`
 
@@ -890,6 +955,36 @@ Exporta las tablas `fieldBook` de los ejercicios anteriores a archivos de Excel.
 
 -   Es posible convertir de formato ancho a largo, pero requiere un poco de práctica y paciencia.
 :::
+
+## Un ejemplo práctico
+
+::: incremental
+
+-   Para tener una idea de como llevar a cabo esta transformación de tablas en R, nos ayudaremos de la librería `tidyr`
+
+-   Esta contiene las funciones más sencillas y también varias tablas para practicar.
+
+:::
+
+. . .
+
+
+```{r echo=T, eval=T, error=T}
+library(tidyr)
+data("relig_income")
+head(relig_income)
+```
+
+## Un ejemplo práctico {visibility="uncounted"}
+
+```{r echo=T, eval=T, error=T}
+relig_income %>%
+  pivot_longer(
+    cols = !religion,
+    names_to = "income",
+    values_to = "count"
+  )
+```
 
 ## ¿Por qué randomizar?
 

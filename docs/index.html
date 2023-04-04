@@ -891,7 +891,7 @@ List of 5
 <span id="cb9-3"><a href="#cb9-3"></a>         <span class="st">"Cepa_C"</span>,</span>
 <span id="cb9-4"><a href="#cb9-4"></a>         <span class="st">"Cepa_D"</span>)</span>
 <span id="cb9-5"><a href="#cb9-5"></a></span>
-<span id="cb9-6"><a href="#cb9-6"></a>trt_lista <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">list</span>(<span class="at">TREATMENT =</span> trt, <span class="at">REP =</span> <span class="dv">3</span>))</span>
+<span id="cb9-6"><a href="#cb9-6"></a>trt_lista <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">TREATMENT =</span> trt, <span class="at">REP =</span> <span class="dv">3</span>)</span>
 <span id="cb9-7"><a href="#cb9-7"></a></span>
 <span id="cb9-8"><a href="#cb9-8"></a>dca.bacterias_2 <span class="ot">&lt;-</span> <span class="fu">CRD</span>(<span class="at">t =</span> <span class="cn">NULL</span>,</span>
 <span id="cb9-9"><a href="#cb9-9"></a>                       <span class="at">reps =</span> <span class="cn">NULL</span>,</span>
@@ -961,6 +961,20 @@ List of 5
 </ul>
 </div>
 </section>
+<section id="ecuación-del-dca" class="slide level2">
+<h2>Ecuación del DCA</h2>
+<ul>
+<li>Matemáticamente un DCA se puede representar con la siguiente fórmula:</li>
+</ul>
+<p><span class="math display">\[
+Y_{i,j} = \beta_0 + \beta_i\,\text{Factor}_i + \epsilon
+\]</span></p>
+<p>Donde:</p>
+<p><span class="math inline">\(Y_{i,j}\)</span>: es la observación del factor <span class="math inline">\(i\)</span> de la repetición <span class="math inline">\(j\)</span></p>
+<p><span class="math inline">\(\beta_0\)</span>: es el parámetro de locación del modelo</p>
+<p><span class="math inline">\(\beta_i\)</span>: es el coeficiente del factor <span class="math inline">\(i\)</span></p>
+<p><span class="math inline">\(\epsilon\)</span>: es el error aleatorio del modelo</p>
+</section>
 <section id="ejercicio-2.1" class="slide level2">
 <h2>Ejercicio 2.1</h2>
 <p>¿Cuál sería la disposición de las botellas en una estantería bajo un DCA, si tenemos 6 cepas (“cepa_1” hasta “cepa_6”) y planeamos tener 4 repeticiones por tratamiento?, (utiliza <code>seed = 1460</code>)</p>
@@ -980,7 +994,7 @@ List of 5
 <h2>Diseño en bloques completamente al azar (DBCA)</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14" data-code-line-numbers="1|2|3|4|7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>dbca.bacterias <span class="ot">&lt;-</span> <span class="fu">RCBD</span>(<span class="at">t =</span> <span class="cn">NULL</span>,</span>
-<span id="cb14-2"><a href="#cb14-2"></a>                       <span class="at">reps =</span> <span class="dv">3</span>,               <span class="co"># importante!     </span></span>
+<span id="cb14-2"><a href="#cb14-2"></a>                       <span class="at">reps =</span> <span class="dv">3</span>,                    </span>
 <span id="cb14-3"><a href="#cb14-3"></a>                       <span class="at">l =</span> <span class="dv">1</span>,                  <span class="co"># número de locaciones</span></span>
 <span id="cb14-4"><a href="#cb14-4"></a>                       <span class="at">plotNumber =</span> <span class="dv">101</span>,       </span>
 <span id="cb14-5"><a href="#cb14-5"></a>                       <span class="at">locationNames =</span> <span class="st">"Quito"</span>, </span>
@@ -1032,6 +1046,16 @@ List of 5
 </ul></li>
 </ul>
 </div>
+</section>
+<section id="ecuación-del-dbca" class="slide level2">
+<h2>Ecuación del DBCA</h2>
+<p><span class="math display">\[
+Y_{i,j,k} = \beta_0 + \beta_i\,\text{Factor}_i + \beta_j\,\text{Bloque}_j+ \epsilon
+\]</span></p>
+<p>Donde:</p>
+<p><span class="math inline">\(Y_{i,j,k}\)</span>: es la observación del factor <span class="math inline">\(i\)</span> del bloque <span class="math inline">\(j\)</span> de la repetición <span class="math inline">\(k\)</span></p>
+<p><span class="math inline">\(\beta_i\)</span>: es el coeficiente del factor <span class="math inline">\(i\)</span></p>
+<p><span class="math inline">\(\beta_j\)</span>: es el coeficiente del bloque <span class="math inline">\(j\)</span></p>
 </section>
 <section id="ejercicio-2.2" class="slide level2">
 <h2>Ejercicio 2.2</h2>
@@ -1101,7 +1125,7 @@ List of 5
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18" data-code-line-numbers="1|2|3|5|6|8|12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>FACTORS <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"CEPA"</span>, <span class="st">"N"</span>), <span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">3</span>))</span>
 <span id="cb18-2"><a href="#cb18-2"></a>LEVELS <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span>, <span class="st">"N1"</span>, <span class="st">"N2"</span>, <span class="st">"N3"</span>)</span>
-<span id="cb18-3"><a href="#cb18-3"></a>data_factorial <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="fu">list</span>(<span class="at">FACTOR =</span> FACTORS, <span class="at">LEVEL =</span> LEVELS))</span>
+<span id="cb18-3"><a href="#cb18-3"></a>data_factorial <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FACTOR =</span> FACTORS, <span class="at">LEVEL =</span> LEVELS)</span>
 <span id="cb18-4"><a href="#cb18-4"></a></span>
 <span id="cb18-5"><a href="#cb18-5"></a>dfc.dca.bacterias <span class="ot">&lt;-</span> <span class="fu">full_factorial</span>(<span class="at">setfactors =</span> <span class="cn">NULL</span>,</span>
 <span id="cb18-6"><a href="#cb18-6"></a>                                    <span class="at">reps =</span> <span class="dv">3</span>,</span>
@@ -1206,6 +1230,16 @@ List of 5
 </ul>
 </div>
 </section>
+<section id="ecuación-del-dcf-de-dos-factores" class="slide level2">
+<h2>Ecuación del DCF (de dos factores)</h2>
+<p><span class="math display">\[
+Y_{i,j,k} = \beta_0 + \beta_i\text{Factor}_i + \beta_j\,\text{Factor}_j + \beta_{ij}\,\text{Factor}_i\times\text{Factor}_j+\epsilon
+\]</span> Donde:</p>
+<p><span class="math inline">\(Y_{i,j,k}\)</span>: es la observación del factor <span class="math inline">\(i\)</span> del bloque <span class="math inline">\(j\)</span> de la repetición <span class="math inline">\(k\)</span></p>
+<p><span class="math inline">\(\beta_i\)</span>: es el coeficiente del factor <span class="math inline">\(i\)</span></p>
+<p><span class="math inline">\(\beta_j\)</span>: es el coeficiente del factor <span class="math inline">\(j\)</span></p>
+<p><span class="math inline">\(\beta_ij\)</span>: es el coefficiente de la interacción de los factores <span class="math inline">\(i\)</span> y <span class="math inline">\(j\)</span></p>
+</section>
 <section id="ejercicio-2.3" class="slide level2">
 <h2>Ejercicio 2.3</h2>
 <p>En nuestro ejemplo de las bacterias degradadoras de N:</p>
@@ -1223,20 +1257,20 @@ List of 5
 <h2>Diseño Cuadrado Latino (DCL)</h2>
 <div>
 <ul>
-<li class="fragment"><p>Se lo puede considerar como una extensión del DBCA factorial al incluir una variable más de bloque para reducir la variación (error) experimental.</p></li>
-<li class="fragment"><p>La ventaja de este tipo de diseños es que fraccionan (reducen) el número de unidades experimentales que serían necesarias para un DBCA factorial.</p></li>
-<li class="fragment"><p>Como condición presenta que el número de niveles de cada factor debe ser el mismo.</p></li>
+<li class="fragment"><p>A diferencia del DBCA, el DCL incluye dos factores de bloque en lugar de uno. Además, estos factores de bloque corresponden a variables de interés del investigador (ya no, como en el ejemplo anterior, que los bloques podían corresponder a locaciones físicas por ejemplo)</p></li>
+<li class="fragment"><p>La ventaja de este tipo de diseños es que fraccionan (reducen) el número de unidades experimentales que serían necesarias con otros diseños.</p></li>
+<li class="fragment"><p>Como condición presenta que el número de niveles de todos los factores sean los mismos.</p></li>
 <li class="fragment"><p>Así, en nuestro ejercicio anterior al retirar la cepa D, tendríamos como base del diseño experimental los siguientes factores/niveles</p>
 <ul>
-<li class="fragment">Factor 1: Cepa
+<li class="fragment">Factor 1: Cepa (tratamiento principal)
 <ul>
 <li class="fragment">Niveles: 3 (“A”, “B”, “C”)</li>
 </ul></li>
-<li class="fragment">Factor 2: Concentración de N
+<li class="fragment">Factor 2: Concentración de N (factor de bloque)
 <ul>
 <li class="fragment">Niveles: 3 (“N1”, “N2”, “N3”)</li>
 </ul></li>
-<li class="fragment">Factor 3: Concentración de P
+<li class="fragment">Factor 3: Concentración de P (factor de bloque)
 <ul>
 <li class="fragment">Niveles: 3 (“P1”, “P2”, “P3”)</li>
 </ul></li>
@@ -1249,7 +1283,7 @@ List of 5
 <div>
 <ul>
 <li class="fragment"><p>Bajo un DBCA factorial con 3 repeticiones, necesitaríamos 81 unidades experimentales, mientras que bajo un DCL, necesitaríamos 27.</p></li>
-<li class="fragment"><p>En otras palabras, podemos generalizar el número total de observaciones si aplicamos la siguiente fórmula: siendo <span class="math inline">\(K\)</span> el número de niveles en un diseño factorial de 3 factores, el número total de unidades experimentales que necesitamos es igual a:</p></li>
+<li class="fragment"><p>Podemos generalizar el número total de observaciones para un DCL si aplicamos la siguiente fórmula: siendo <span class="math inline">\(K\)</span> el número de niveles todos los factores, el número total de unidades experimentales que necesitamos es igual a:</p></li>
 </ul>
 </div>
 <div class="fragment">
@@ -1257,7 +1291,8 @@ List of 5
 \text{UE} &amp;=\text{número de repeticiones} \times K^2
 \end{align}\]</span>
 <ul>
-<li>Esta reducción en el número de unidades experimentales es conseguido gracias a arreglos especiales de las unidades experimentales (no nos adentraremos en detalle, pero si estás más interesado, puedes consultar <a href="http://wpd.ugr.es/~bioestad/wp-content/uploads/Latinos.pdf" target="_blank">este enlace</a>)</li>
+<li><p>Esta reducción en el número de unidades experimentales es conseguido gracias a ordenar al azar las unidades experimentales en un cuadrado (de ahí su nombre) donde el número de filas y columnas es igual a <span class="math inline">\(K\)</span> niveles se consideren.</p></li>
+<li><p>Esta optimización de recursos tienen un costo, en un DCL no es posible estimar coeficientes para interacciones.</p></li>
 </ul>
 </div>
 </section>
@@ -1322,6 +1357,16 @@ List of 5
 </ul></li>
 </ul>
 </div>
+</section>
+<section id="ecuación-del-dcl" class="slide level2">
+<h2>Ecuación del DCL</h2>
+<p><span class="math display">\[
+Y_{i,j,k,l} = \beta_0 + \beta_i\text{Factor}_i + \beta_j\,\text{Fila}_j + \beta_{k}\,\text{Columna}_k+\epsilon
+\]</span></p>
+<p><span class="math inline">\(Y_{i,j,k,l}\)</span>: es la observación del factor <span class="math inline">\(i\)</span> de la fila <span class="math inline">\(j\)</span> de la columna <span class="math inline">\(k\)</span> de la repetición <span class="math inline">\(l\)</span></p>
+<p><span class="math inline">\(\beta_i\)</span>: es el coeficiente del factor <span class="math inline">\(i\)</span></p>
+<p><span class="math inline">\(\beta_j\)</span>: es el coeficiente de la fila <span class="math inline">\(j\)</span></p>
+<p><span class="math inline">\(\beta_k\)</span>: es el coeficiente de la columna <span class="math inline">\(k\)</span></p>
 </section>
 <section id="usando-el-fieldbook" class="slide level2">
 <h2>Usando el <code>fieldBook</code></h2>
@@ -1398,6 +1443,63 @@ List of 5
 </ul>
 </div>
 </section>
+<section id="un-ejemplo-práctico" class="slide level2">
+<h2>Un ejemplo práctico</h2>
+<div>
+<ul>
+<li class="fragment"><p>Para tener una idea de como llevar a cabo esta transformación de tablas en R, nos ayudaremos de la librería <code>tidyr</code></p></li>
+<li class="fragment"><p>Esta contiene las funciones más sencillas y también varias tablas para practicar.</p></li>
+</ul>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb31-2"><a href="#cb31-2"></a><span class="fu">data</span>(<span class="st">"relig_income"</span>)</span>
+<span id="cb31-3"><a href="#cb31-3"></a><span class="fu">head</span>(relig_income)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 11
+  religion       `&lt;$10k` $10-2…¹ $20-3…² $30-4…³ $40-5…⁴ $50-7…⁵ $75-1…⁶ $100-…⁷
+  &lt;chr&gt;            &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+1 Agnostic            27      34      60      81      76     137     122     109
+2 Atheist             12      27      37      52      35      70      73      59
+3 Buddhist            27      21      30      34      33      58      62      39
+4 Catholic           418     617     732     670     638    1116     949     792
+5 Don’t know/re…      15      14      15      11      10      35      21      17
+6 Evangelical P…     575     869    1064     982     881    1486     949     723
+# … with 2 more variables: `&gt;150k` &lt;dbl&gt;, `Don't know/refused` &lt;dbl&gt;, and
+#   abbreviated variable names ¹​`$10-20k`, ²​`$20-30k`, ³​`$30-40k`, ⁴​`$40-50k`,
+#   ⁵​`$50-75k`, ⁶​`$75-100k`, ⁷​`$100-150k`</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="un-ejemplo-práctico-1" class="slide level2" data-visibility="uncounted">
+<h2>Un ejemplo práctico</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>relig_income <span class="sc">%&gt;%</span></span>
+<span id="cb33-2"><a href="#cb33-2"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb33-3"><a href="#cb33-3"></a>    <span class="at">cols =</span> <span class="sc">!</span>religion,</span>
+<span id="cb33-4"><a href="#cb33-4"></a>    <span class="at">names_to =</span> <span class="st">"income"</span>,</span>
+<span id="cb33-5"><a href="#cb33-5"></a>    <span class="at">values_to =</span> <span class="st">"count"</span></span>
+<span id="cb33-6"><a href="#cb33-6"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 180 × 3
+   religion income             count
+   &lt;chr&gt;    &lt;chr&gt;              &lt;dbl&gt;
+ 1 Agnostic &lt;$10k                 27
+ 2 Agnostic $10-20k               34
+ 3 Agnostic $20-30k               60
+ 4 Agnostic $30-40k               81
+ 5 Agnostic $40-50k               76
+ 6 Agnostic $50-75k              137
+ 7 Agnostic $75-100k             122
+ 8 Agnostic $100-150k            109
+ 9 Agnostic &gt;150k                 84
+10 Agnostic Don't know/refused    96
+# … with 170 more rows</code></pre>
+</div>
+</div>
+</section>
 <section id="por-qué-randomizar" class="slide level2">
 <h2>¿Por qué randomizar?</h2>
 <div>
@@ -1440,14 +1542,14 @@ List of 5
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31" data-code-line-numbers="7-8"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb31-1" class="hljs-ln-code"><a href="#cb31-1"></a><span class="do">#### un NO DCA ####</span></span>
-<span id="cb31-2" class="hljs-ln-code"><a href="#cb31-2"></a>no.dca <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">rendimiento =</span> <span class="fu">c</span>(<span class="fl">7.6</span>, <span class="fl">7.4</span>, <span class="fl">7.2</span>, <span class="fl">7.0</span>,</span>
-<span id="cb31-3" class="hljs-ln-code"><a href="#cb31-3"></a>                                     <span class="fl">8.1</span>, <span class="fl">7.6</span>, <span class="fl">7.3</span>, <span class="fl">7.0</span>,</span>
-<span id="cb31-4" class="hljs-ln-code"><a href="#cb31-4"></a>                                     <span class="fl">8.3</span>, <span class="fl">8.1</span>, <span class="fl">7.9</span>, <span class="fl">7.3</span>,</span>
-<span id="cb31-5" class="hljs-ln-code"><a href="#cb31-5"></a>                                     <span class="fl">8.8</span>, <span class="fl">8.5</span>, <span class="fl">8.0</span>, <span class="fl">7.7</span>,</span>
-<span id="cb31-6" class="hljs-ln-code"><a href="#cb31-6"></a>                                     <span class="fl">9.0</span>, <span class="fl">8.6</span>, <span class="fl">8.4</span>, <span class="fl">8.0</span>),</span>
-<span id="cb31-7" class="hljs-ln-code"><a href="#cb31-7"></a>                     <span class="at">tratamiento =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"A"</span>, <span class="dv">4</span>), <span class="fu">rep</span>(<span class="st">"B"</span>, <span class="dv">4</span>), <span class="fu">rep</span>(<span class="st">"C"</span>, <span class="dv">4</span>),</span>
-<span id="cb31-8" class="hljs-ln-code"><a href="#cb31-8"></a>                                     <span class="fu">rep</span>(<span class="st">"D"</span>, <span class="dv">4</span>), <span class="fu">rep</span>(<span class="st">"E"</span>,<span class="dv">4</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35" data-code-line-numbers="7-8"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb35-1" class="hljs-ln-code"><a href="#cb35-1"></a><span class="do">#### un NO DCA ####</span></span>
+<span id="cb35-2" class="hljs-ln-code"><a href="#cb35-2"></a>no.dca <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">rendimiento =</span> <span class="fu">c</span>(<span class="fl">7.6</span>, <span class="fl">7.4</span>, <span class="fl">7.2</span>, <span class="fl">7.0</span>,</span>
+<span id="cb35-3" class="hljs-ln-code"><a href="#cb35-3"></a>                                     <span class="fl">8.1</span>, <span class="fl">7.6</span>, <span class="fl">7.3</span>, <span class="fl">7.0</span>,</span>
+<span id="cb35-4" class="hljs-ln-code"><a href="#cb35-4"></a>                                     <span class="fl">8.3</span>, <span class="fl">8.1</span>, <span class="fl">7.9</span>, <span class="fl">7.3</span>,</span>
+<span id="cb35-5" class="hljs-ln-code"><a href="#cb35-5"></a>                                     <span class="fl">8.8</span>, <span class="fl">8.5</span>, <span class="fl">8.0</span>, <span class="fl">7.7</span>,</span>
+<span id="cb35-6" class="hljs-ln-code"><a href="#cb35-6"></a>                                     <span class="fl">9.0</span>, <span class="fl">8.6</span>, <span class="fl">8.4</span>, <span class="fl">8.0</span>),</span>
+<span id="cb35-7" class="hljs-ln-code"><a href="#cb35-7"></a>                     <span class="at">tratamiento =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"A"</span>, <span class="dv">4</span>), <span class="fu">rep</span>(<span class="st">"B"</span>, <span class="dv">4</span>), <span class="fu">rep</span>(<span class="st">"C"</span>, <span class="dv">4</span>),</span>
+<span id="cb35-8" class="hljs-ln-code"><a href="#cb35-8"></a>                                     <span class="fu">rep</span>(<span class="st">"D"</span>, <span class="dv">4</span>), <span class="fu">rep</span>(<span class="st">"E"</span>,<span class="dv">4</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -1469,8 +1571,8 @@ List of 5
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32" data-code-line-numbers="6-7"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb32-1" class="hljs-ln-code"><a href="#cb32-1"></a>fit1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(rendimiento <span class="sc">~</span> tratamiento, <span class="at">data =</span> no.dca)</span>
-<span id="cb32-2" class="hljs-ln-code"><a href="#cb32-2"></a><span class="fu">anova</span>(fit1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36" data-code-line-numbers="6-7"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb36-1" class="hljs-ln-code"><a href="#cb36-1"></a>fit1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(rendimiento <span class="sc">~</span> tratamiento, <span class="at">data =</span> no.dca)</span>
+<span id="cb36-2" class="hljs-ln-code"><a href="#cb36-2"></a><span class="fu">anova</span>(fit1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
 
@@ -1501,15 +1603,15 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34" data-code-line-numbers="2|9"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb34-1" class="hljs-ln-code"><a href="#cb34-1"></a><span class="do">#### un DCA ####</span></span>
-<span id="cb34-2" class="hljs-ln-code"><a href="#cb34-2"></a>tratamientos <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span>, <span class="st">"E"</span>), <span class="dv">4</span>)</span>
-<span id="cb34-3" class="hljs-ln-code"><a href="#cb34-3"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb34-4" class="hljs-ln-code"><a href="#cb34-4"></a>si.dca <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">rendimiento =</span> <span class="fu">c</span>(<span class="fl">7.6</span>, <span class="fl">7.4</span>, <span class="fl">7.2</span>, <span class="fl">7.0</span>,</span>
-<span id="cb34-5" class="hljs-ln-code"><a href="#cb34-5"></a>                                     <span class="fl">8.1</span>, <span class="fl">7.6</span>, <span class="fl">7.3</span>, <span class="fl">7.0</span>,</span>
-<span id="cb34-6" class="hljs-ln-code"><a href="#cb34-6"></a>                                     <span class="fl">8.3</span>, <span class="fl">8.1</span>, <span class="fl">7.9</span>, <span class="fl">7.3</span>,</span>
-<span id="cb34-7" class="hljs-ln-code"><a href="#cb34-7"></a>                                     <span class="fl">8.8</span>, <span class="fl">8.5</span>, <span class="fl">8.0</span>, <span class="fl">7.7</span>,</span>
-<span id="cb34-8" class="hljs-ln-code"><a href="#cb34-8"></a>                                     <span class="fl">9.0</span>, <span class="fl">8.6</span>, <span class="fl">8.4</span>, <span class="fl">8.0</span>),</span>
-<span id="cb34-9" class="hljs-ln-code"><a href="#cb34-9"></a>                     <span class="at">tratamiento =</span> <span class="fu">sample</span>(tratamientos))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38" data-code-line-numbers="2|9"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb38-1" class="hljs-ln-code"><a href="#cb38-1"></a><span class="do">#### un DCA ####</span></span>
+<span id="cb38-2" class="hljs-ln-code"><a href="#cb38-2"></a>tratamientos <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span>, <span class="st">"E"</span>), <span class="dv">4</span>)</span>
+<span id="cb38-3" class="hljs-ln-code"><a href="#cb38-3"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb38-4" class="hljs-ln-code"><a href="#cb38-4"></a>si.dca <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">rendimiento =</span> <span class="fu">c</span>(<span class="fl">7.6</span>, <span class="fl">7.4</span>, <span class="fl">7.2</span>, <span class="fl">7.0</span>,</span>
+<span id="cb38-5" class="hljs-ln-code"><a href="#cb38-5"></a>                                     <span class="fl">8.1</span>, <span class="fl">7.6</span>, <span class="fl">7.3</span>, <span class="fl">7.0</span>,</span>
+<span id="cb38-6" class="hljs-ln-code"><a href="#cb38-6"></a>                                     <span class="fl">8.3</span>, <span class="fl">8.1</span>, <span class="fl">7.9</span>, <span class="fl">7.3</span>,</span>
+<span id="cb38-7" class="hljs-ln-code"><a href="#cb38-7"></a>                                     <span class="fl">8.8</span>, <span class="fl">8.5</span>, <span class="fl">8.0</span>, <span class="fl">7.7</span>,</span>
+<span id="cb38-8" class="hljs-ln-code"><a href="#cb38-8"></a>                                     <span class="fl">9.0</span>, <span class="fl">8.6</span>, <span class="fl">8.4</span>, <span class="fl">8.0</span>),</span>
+<span id="cb38-9" class="hljs-ln-code"><a href="#cb38-9"></a>                     <span class="at">tratamiento =</span> <span class="fu">sample</span>(tratamientos))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="por-qué-randomizar-5" class="slide level2" data-visibility="uncounted" data-auto-animate="true">
@@ -1530,8 +1632,8 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb35-1" class="hljs-ln-code"><a href="#cb35-1"></a>fit2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(rendimiento <span class="sc">~</span> tratamiento, <span class="at">data =</span> si.dca)</span>
-<span id="cb35-2" class="hljs-ln-code"><a href="#cb35-2"></a><span class="fu">anova</span>(fit2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb39-1" class="hljs-ln-code"><a href="#cb39-1"></a>fit2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(rendimiento <span class="sc">~</span> tratamiento, <span class="at">data =</span> si.dca)</span>
+<span id="cb39-2" class="hljs-ln-code"><a href="#cb39-2"></a><span class="fu">anova</span>(fit2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
 

@@ -165,7 +165,7 @@
     "href": "index.html#diseño-completamente-al-azar-dca-5",
     "title": "Estadística aplicada con R",
     "section": "Diseño completamente al azar (DCA)",
-    "text": "Diseño completamente al azar (DCA)\n\nUnos toques finales\n\n\n\ntrt &lt;- c(\"Cepa_A\",\n         \"Cepa_B\",\n         \"Cepa_C\",\n         \"Cepa_D\")\n\ntrt_lista &lt;- data.frame(list(TREATMENT = trt, REP = 3))\n\ndca.bacterias_2 &lt;- CRD(t = NULL,\n                       reps = NULL,\n                       plotNumber = 101,\n                       seed = 123,\n                       locationName = \"Quito\",\n                       data = trt_lista)\n\n\n\nplot(dca.bacterias_2)"
+    "text": "Diseño completamente al azar (DCA)\n\nUnos toques finales\n\n\n\ntrt &lt;- c(\"Cepa_A\",\n         \"Cepa_B\",\n         \"Cepa_C\",\n         \"Cepa_D\")\n\ntrt_lista &lt;- data.frame(TREATMENT = trt, REP = 3)\n\ndca.bacterias_2 &lt;- CRD(t = NULL,\n                       reps = NULL,\n                       plotNumber = 101,\n                       seed = 123,\n                       locationName = \"Quito\",\n                       data = trt_lista)\n\n\n\nplot(dca.bacterias_2)"
   },
   {
     "objectID": "index.html#diseño-completamente-al-azar-dca-6",
@@ -193,7 +193,7 @@
     "href": "index.html#diseño-en-bloques-completamente-al-azar-dbca-1",
     "title": "Estadística aplicada con R",
     "section": "Diseño en bloques completamente al azar (DBCA)",
-    "text": "Diseño en bloques completamente al azar (DBCA)\n\ndbca.bacterias &lt;- RCBD(t = NULL,\n                       reps = 3,               # importante!     \n                       l = 1,                  # número de locaciones\n                       plotNumber = 101,       \n                       locationNames = \"Quito\", \n                       seed = 123,\n                       data = trt_lista)       \n\n\n\n\ndbca.bacterias$fieldBook\n\n   ID LOCATION PLOT REP TREATMENT\n1   1    QUITO  101   1    Cepa_C\n2   2    QUITO  102   1    Cepa_D\n3   3    QUITO  103   1    Cepa_A\n4   4    QUITO  104   1    Cepa_B\n8   5    QUITO  201   2    Cepa_A\n7   6    QUITO  202   2    Cepa_D\n6   7    QUITO  203   2    Cepa_B\n5   8    QUITO  204   2    Cepa_C\n9   9    QUITO  301   3    Cepa_C\n10 10    QUITO  302   3    Cepa_A\n11 11    QUITO  303   3    Cepa_B\n12 12    QUITO  304   3    Cepa_D\n\n\n\n\nplot(dbca.bacterias)"
+    "text": "Diseño en bloques completamente al azar (DBCA)\n\ndbca.bacterias &lt;- RCBD(t = NULL,\n                       reps = 3,                    \n                       l = 1,                  # número de locaciones\n                       plotNumber = 101,       \n                       locationNames = \"Quito\", \n                       seed = 123,\n                       data = trt_lista)       \n\n\n\n\ndbca.bacterias$fieldBook\n\n   ID LOCATION PLOT REP TREATMENT\n1   1    QUITO  101   1    Cepa_C\n2   2    QUITO  102   1    Cepa_D\n3   3    QUITO  103   1    Cepa_A\n4   4    QUITO  104   1    Cepa_B\n8   5    QUITO  201   2    Cepa_A\n7   6    QUITO  202   2    Cepa_D\n6   7    QUITO  203   2    Cepa_B\n5   8    QUITO  204   2    Cepa_C\n9   9    QUITO  301   3    Cepa_C\n10 10    QUITO  302   3    Cepa_A\n11 11    QUITO  303   3    Cepa_B\n12 12    QUITO  304   3    Cepa_D\n\n\n\n\nplot(dbca.bacterias)"
   },
   {
     "objectID": "index.html#ejercicio-2.2",
@@ -228,7 +228,7 @@
     "href": "index.html#diseño-factorial-completo-dfc-3",
     "title": "Estadística aplicada con R",
     "section": "Diseño factorial completo (DFC)",
-    "text": "Diseño factorial completo (DFC)\nDCA factorial completo\n\nFACTORS &lt;- rep(c(\"CEPA\", \"N\"), c(4,3))\nLEVELS &lt;- c(\"A\", \"B\", \"C\", \"D\", \"N1\", \"N2\", \"N3\")\ndata_factorial &lt;- data.frame(list(FACTOR = FACTORS, LEVEL = LEVELS))\n\ndfc.dca.bacterias &lt;- full_factorial(setfactors = NULL,\n                                    reps = 3,\n                                    l = 1,\n                                    type = 1,\n                                    plotNumber = 101,\n                                    seed = 123,\n                                    locationNames = \"Quito\",\n                                    data = data_factorial)\n\n\n\n\nhead(dfc.dca.bacterias$fieldBook, 14)\n\n   ID LOCATION PLOT REP FACTOR_CEPA FACTOR_N TRT_COMB\n1   1    Quito  101   3           A       N3     A*N3\n2   2    Quito  102   2           B       N1     B*N1\n3   3    Quito  103   3           D       N3     D*N3\n4   4    Quito  104   1           B       N3     B*N3\n5   5    Quito  105   1           B       N3     B*N3\n6   6    Quito  106   1           A       N1     A*N1\n7   7    Quito  107   2           C       N3     C*N3\n8   8    Quito  108   1           A       N1     A*N1\n9   9    Quito  109   2           D       N2     D*N2\n10 10    Quito  110   3           B       N2     B*N2\n11 11    Quito  111   3           B       N2     B*N2\n12 12    Quito  112   1           A       N1     A*N1\n13 13    Quito  113   2           D       N2     D*N2\n14 14    Quito  114   1           D       N1     D*N1\n\n\n\n\nplot(dfc.dca.bacterias)"
+    "text": "Diseño factorial completo (DFC)\nDCA factorial completo\n\nFACTORS &lt;- rep(c(\"CEPA\", \"N\"), c(4,3))\nLEVELS &lt;- c(\"A\", \"B\", \"C\", \"D\", \"N1\", \"N2\", \"N3\")\ndata_factorial &lt;- data.frame(FACTOR = FACTORS, LEVEL = LEVELS)\n\ndfc.dca.bacterias &lt;- full_factorial(setfactors = NULL,\n                                    reps = 3,\n                                    l = 1,\n                                    type = 1,\n                                    plotNumber = 101,\n                                    seed = 123,\n                                    locationNames = \"Quito\",\n                                    data = data_factorial)\n\n\n\n\nhead(dfc.dca.bacterias$fieldBook, 14)\n\n   ID LOCATION PLOT REP FACTOR_CEPA FACTOR_N TRT_COMB\n1   1    Quito  101   3           A       N3     A*N3\n2   2    Quito  102   2           B       N1     B*N1\n3   3    Quito  103   3           D       N3     D*N3\n4   4    Quito  104   1           B       N3     B*N3\n5   5    Quito  105   1           B       N3     B*N3\n6   6    Quito  106   1           A       N1     A*N1\n7   7    Quito  107   2           C       N3     C*N3\n8   8    Quito  108   1           A       N1     A*N1\n9   9    Quito  109   2           D       N2     D*N2\n10 10    Quito  110   3           B       N2     B*N2\n11 11    Quito  111   3           B       N2     B*N2\n12 12    Quito  112   1           A       N1     A*N1\n13 13    Quito  113   2           D       N2     D*N2\n14 14    Quito  114   1           D       N1     D*N1\n\n\n\n\nplot(dfc.dca.bacterias)"
   },
   {
     "objectID": "index.html#diseño-factorial-completo-dfc-4",
@@ -326,14 +326,14 @@
     "href": "index.html#diseño-cuadrado-latino-dcl",
     "title": "Estadística aplicada con R",
     "section": "Diseño Cuadrado Latino (DCL)",
-    "text": "Diseño Cuadrado Latino (DCL)\n\n\nSe lo puede considerar como una extensión del DBCA factorial al incluir una variable más de bloque para reducir la variación (error) experimental.\nLa ventaja de este tipo de diseños es que fraccionan (reducen) el número de unidades experimentales que serían necesarias para un DBCA factorial.\nComo condición presenta que el número de niveles de cada factor debe ser el mismo.\nAsí, en nuestro ejercicio anterior al retirar la cepa D, tendríamos como base del diseño experimental los siguientes factores/niveles\n\nFactor 1: Cepa\n\nNiveles: 3 (“A”, “B”, “C”)\n\nFactor 2: Concentración de N\n\nNiveles: 3 (“N1”, “N2”, “N3”)\n\nFactor 3: Concentración de P\n\nNiveles: 3 (“P1”, “P2”, “P3”)"
+    "text": "Diseño Cuadrado Latino (DCL)\n\n\nA diferencia del DBCA, el DCL incluye dos factores de bloque en lugar de uno. Además, estos factores de bloque corresponden a variables de interés del investigador (ya no, como en el ejemplo anterior, que los bloques podían corresponder a locaciones físicas por ejemplo)\nLa ventaja de este tipo de diseños es que fraccionan (reducen) el número de unidades experimentales que serían necesarias con otros diseños.\nComo condición presenta que el número de niveles de todos los factores sean los mismos.\nAsí, en nuestro ejercicio anterior al retirar la cepa D, tendríamos como base del diseño experimental los siguientes factores/niveles\n\nFactor 1: Cepa (tratamiento principal)\n\nNiveles: 3 (“A”, “B”, “C”)\n\nFactor 2: Concentración de N (factor de bloque)\n\nNiveles: 3 (“N1”, “N2”, “N3”)\n\nFactor 3: Concentración de P (factor de bloque)\n\nNiveles: 3 (“P1”, “P2”, “P3”)"
   },
   {
     "objectID": "index.html#diseño-cuadrado-latino-dcl-1",
     "href": "index.html#diseño-cuadrado-latino-dcl-1",
     "title": "Estadística aplicada con R",
     "section": "Diseño Cuadrado Latino (DCL)",
-    "text": "Diseño Cuadrado Latino (DCL)\n\n\nBajo un DBCA factorial con 3 repeticiones, necesitaríamos 81 unidades experimentales, mientras que bajo un DCL, necesitaríamos 27.\nEn otras palabras, podemos generalizar el número total de observaciones si aplicamos la siguiente fórmula: siendo \\(K\\) el número de niveles en un diseño factorial de 3 factores, el número total de unidades experimentales que necesitamos es igual a:\n\n\n\n\\[\\begin{align}\n\\text{UE} &=\\text{número de repeticiones} \\times K^2\n\\end{align}\\]\n\nEsta reducción en el número de unidades experimentales es conseguido gracias a arreglos especiales de las unidades experimentales (no nos adentraremos en detalle, pero si estás más interesado, puedes consultar este enlace)"
+    "text": "Diseño Cuadrado Latino (DCL)\n\n\nBajo un DBCA factorial con 3 repeticiones, necesitaríamos 81 unidades experimentales, mientras que bajo un DCL, necesitaríamos 27.\nPodemos generalizar el número total de observaciones para un DCL si aplicamos la siguiente fórmula: siendo \\(K\\) el número de niveles todos los factores, el número total de unidades experimentales que necesitamos es igual a:\n\n\n\n\\[\\begin{align}\n\\text{UE} &=\\text{número de repeticiones} \\times K^2\n\\end{align}\\]\n\nEsta reducción en el número de unidades experimentales es conseguido gracias a ordenar al azar las unidades experimentales en un cuadrado (de ahí su nombre) donde el número de filas y columnas es igual a \\(K\\) niveles se consideren.\nEsta optimización de recursos tienen un costo, en un DCL no es posible estimar coeficientes para interacciones."
   },
   {
     "objectID": "index.html#diseño-cuadrado-latino-dcl-2",
@@ -397,5 +397,47 @@
     "title": "Estadística aplicada con R",
     "section": "¡Un consejo!",
     "text": "¡Un consejo!\n\n\nPor razones de tiempo y enfoque del curso, no entramos en mayor detalle en el estudio de la ortogonalidad.\nAgregando brevemente a este principio, los diseños que hemos discutido al igual que muchos otros, tienen límites en cuanto a lo que pueden y no pueden estimar dependiendo de la ortogonalidad.\nUna práctica un tanto empírica que he aprendido con los años, es después de haber establecido los objetivos y lo que quiero estimar de un experimento (llámese interacciones, términos cuadráticos, etc), es generar datos para llenar las matrices de los modelos que he tenido en mente, y ver si son lo suficientemente flexibles para estimar los parámetros en mente."
+  },
+  {
+    "objectID": "index.html#ecuación-del-dca",
+    "href": "index.html#ecuación-del-dca",
+    "title": "Estadística aplicada con R",
+    "section": "Ecuación del DCA",
+    "text": "Ecuación del DCA\n\nMatemáticamente un DCA se puede representar con la siguiente fórmula:\n\n\\[\nY_{i,j} = \\beta_0 + \\beta_i\\,\\text{Factor}_i + \\epsilon\n\\]\nDonde:\n\\(Y_{i,j}\\): es la observación del factor \\(i\\) de la repetición \\(j\\)\n\\(\\beta_0\\): es el parámetro de locación del modelo\n\\(\\beta_i\\): es el coeficiente del factor \\(i\\)\n\\(\\epsilon\\): es el error aleatorio del modelo"
+  },
+  {
+    "objectID": "index.html#ecuación-del-dbca",
+    "href": "index.html#ecuación-del-dbca",
+    "title": "Estadística aplicada con R",
+    "section": "Ecuación del DBCA",
+    "text": "Ecuación del DBCA\n\\[\nY_{i,j,k} = \\beta_0 + \\beta_i\\,\\text{Factor}_i + \\beta_j\\,\\text{Bloque}_j+ \\epsilon\n\\]\nDonde:\n\\(Y_{i,j,k}\\): es la observación del factor \\(i\\) del bloque \\(j\\) de la repetición \\(k\\)\n\\(\\beta_i\\): es el coeficiente del factor \\(i\\)\n\\(\\beta_j\\): es el coeficiente del bloque \\(j\\)"
+  },
+  {
+    "objectID": "index.html#ecuación-del-dcf-de-dos-factores",
+    "href": "index.html#ecuación-del-dcf-de-dos-factores",
+    "title": "Estadística aplicada con R",
+    "section": "Ecuación del DCF (de dos factores)",
+    "text": "Ecuación del DCF (de dos factores)\n\\[\nY_{i,j,k} = \\beta_0 + \\beta_i\\text{Factor}_i + \\beta_j\\,\\text{Factor}_j + \\beta_{ij}\\,\\text{Factor}_i\\times\\text{Factor}_j+\\epsilon\n\\] Donde:\n\\(Y_{i,j,k}\\): es la observación del factor \\(i\\) del bloque \\(j\\) de la repetición \\(k\\)\n\\(\\beta_i\\): es el coeficiente del factor \\(i\\)\n\\(\\beta_j\\): es el coeficiente del factor \\(j\\)\n\\(\\beta_ij\\): es el coefficiente de la interacción de los factores \\(i\\) y \\(j\\)"
+  },
+  {
+    "objectID": "index.html#ecuación-del-dcl",
+    "href": "index.html#ecuación-del-dcl",
+    "title": "Estadística aplicada con R",
+    "section": "Ecuación del DCL",
+    "text": "Ecuación del DCL\n\\[\nY_{i,j,k,l} = \\beta_0 + \\beta_i\\text{Factor}_i + \\beta_j\\,\\text{Fila}_j + \\beta_{k}\\,\\text{Columna}_k+\\epsilon\n\\]\n\\(Y_{i,j,k,l}\\): es la observación del factor \\(i\\) de la fila \\(j\\) de la columna \\(k\\) de la repetición \\(l\\)\n\\(\\beta_i\\): es el coeficiente del factor \\(i\\)\n\\(\\beta_j\\): es el coeficiente de la fila \\(j\\)\n\\(\\beta_k\\): es el coeficiente de la columna \\(k\\)"
+  },
+  {
+    "objectID": "index.html#un-ejemplo-práctico",
+    "href": "index.html#un-ejemplo-práctico",
+    "title": "Estadística aplicada con R",
+    "section": "Un ejemplo práctico",
+    "text": "Un ejemplo práctico\n\n\nPara tener una idea de como llevar a cabo esta transformación de tablas en R, nos ayudaremos de la librería tidyr\nEsta contiene las funciones más sencillas y también varias tablas para practicar.\n\n\n\n\nlibrary(tidyr)\ndata(\"relig_income\")\nhead(relig_income)\n\n# A tibble: 6 × 11\n  religion       `&lt;$10k` $10-2…¹ $20-3…² $30-4…³ $40-5…⁴ $50-7…⁵ $75-1…⁶ $100-…⁷\n  &lt;chr&gt;            &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;\n1 Agnostic            27      34      60      81      76     137     122     109\n2 Atheist             12      27      37      52      35      70      73      59\n3 Buddhist            27      21      30      34      33      58      62      39\n4 Catholic           418     617     732     670     638    1116     949     792\n5 Don’t know/re…      15      14      15      11      10      35      21      17\n6 Evangelical P…     575     869    1064     982     881    1486     949     723\n# … with 2 more variables: `&gt;150k` &lt;dbl&gt;, `Don't know/refused` &lt;dbl&gt;, and\n#   abbreviated variable names ¹​`$10-20k`, ²​`$20-30k`, ³​`$30-40k`, ⁴​`$40-50k`,\n#   ⁵​`$50-75k`, ⁶​`$75-100k`, ⁷​`$100-150k`"
+  },
+  {
+    "objectID": "index.html#un-ejemplo-práctico-1",
+    "href": "index.html#un-ejemplo-práctico-1",
+    "title": "Estadística aplicada con R",
+    "section": "Un ejemplo práctico",
+    "text": "Un ejemplo práctico\n\nrelig_income %&gt;%\n  pivot_longer(\n    cols = !religion,\n    names_to = \"income\",\n    values_to = \"count\"\n  )\n\n# A tibble: 180 × 3\n   religion income             count\n   &lt;chr&gt;    &lt;chr&gt;              &lt;dbl&gt;\n 1 Agnostic &lt;$10k                 27\n 2 Agnostic $10-20k               34\n 3 Agnostic $20-30k               60\n 4 Agnostic $30-40k               81\n 5 Agnostic $40-50k               76\n 6 Agnostic $50-75k              137\n 7 Agnostic $75-100k             122\n 8 Agnostic $100-150k            109\n 9 Agnostic &gt;150k                 84\n10 Agnostic Don't know/refused    96\n# … with 170 more rows"
   }
 ]
